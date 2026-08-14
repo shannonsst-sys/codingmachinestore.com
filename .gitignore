@@ -1,0 +1,17 @@
+# Local source folders and reference materials (not part of the public site)
+/墨轮打码机/
+/喷码机/
+/色带打码机/
+
+# Local visual QA output
+/output/
+/output-home.png
+
+# Accidental duplicate detail files from the source import
+/public/assets/products/dy-8/details
+/public/assets/products/hp-241b/details
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
