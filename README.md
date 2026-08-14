@@ -30,11 +30,12 @@ The AI-generated hero visual is saved at `public/assets/generated/hero-coding-ma
 
 ## Cloudflare Pages deployment
 
-This repository is prepared for Cloudflare Pages Git integration:
+This repository is prepared for Cloudflare Workers Static Assets deployment:
 
 - Production branch: `main`
-- Build command: `exit 0` (or leave blank for a plain static deployment)
-- Build output directory: repository root, where `index.html` lives
-- Custom domain: configure `codingmachinestore.com` under Workers & Pages → Custom domains
+- Build command: `exit 0`
+- Deploy command: `npx wrangler deploy`
+- Static assets directory: repository root, where `index.html` lives
+- Custom domain: configure `codingmachinestore.com` under Workers & Pages → Workers → Custom domains
 
-Cloudflare Pages will automatically redeploy the site after each push to the connected GitHub repository.
+Cloudflare Workers will automatically redeploy the site after each push to the connected GitHub repository.
