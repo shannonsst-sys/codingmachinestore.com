@@ -28,11 +28,13 @@ Then open `http://localhost:4173`.
 
 The AI-generated hero visual is saved at `public/assets/generated/hero-coding-machine.png`. Product assets are copied into `public/assets/products/` from the supplied folders.
 
-## GitHub Pages + Cloudflare
+## Cloudflare Pages deployment
 
-The repository includes:
+This repository is prepared for Cloudflare Pages Git integration:
 
-- `CNAME` for `codingmachinestore.com`.
-- `.github/workflows/pages.yml` to publish the static site with GitHub Pages after each push to `main`.
+- Production branch: `main`
+- Build command: `exit 0` (or leave blank for a plain static deployment)
+- Build output directory: repository root, where `index.html` lives
+- Custom domain: configure `codingmachinestore.com` under Workers & Pages → Custom domains
 
-After the repository is pushed to GitHub, enable **Settings → Pages → GitHub Actions**, then enter `codingmachinestore.com` as the custom domain. In Cloudflare DNS, point the apex domain to GitHub Pages with the four GitHub A records, and point `www` to the repository's `*.github.io` address. Keep the records DNS-only while GitHub issues the HTTPS certificate; Cloudflare proxying can be enabled after HTTPS is active.
+Cloudflare Pages will automatically redeploy the site after each push to the connected GitHub repository.
