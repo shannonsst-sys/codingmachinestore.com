@@ -31,6 +31,7 @@ export type ProductOptionValue = {
   description?: string;
   requiresNotes?: boolean;
   maxCharacters?: number;
+  contents?: string;
 };
 
 export type ProductOption = {
@@ -83,7 +84,7 @@ export const products: Product[] = [
     applications: 'DY-8 · HP-241B · HP-30 · DY-6 · Semi-automatic and automatic ribbon coders',
     specs: [['Standard English + numbers', '73-character layout · $25'], ['Numeric box', '72-character layout · $25'], ['English + numbers', '120-character layout · $40'], ['Customized box', 'Exactly 72 characters · Quote on request'], ['Included accessories', 'Metal stamp holder · Hex key · Tweezers']],
     notesPrompt: 'Enter the quantity needed for each character. The total must be exactly 72 pieces.',
-    options: [{ id: 'box-sku', label: 'Box SKU', helper: 'Choose a standard box or build a custom 72-character mix.', values: [{ id: 'en-num-73', sku: 'EN-NUM-73', label: 'English + numbers · 73 characters', price: 25, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.' }, { id: 'numeric-72', sku: 'NUM-72', label: 'Pure numeric · 72 characters', price: 25, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.' }, { id: 'en-num-120', sku: 'EN-NUM-120', label: 'English + numbers · 120 characters', price: 40, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.' }, { id: 'custom-72', sku: 'CUSTOM-72', label: 'Customized · exactly 72 characters', price: 0, quoteOnly: true, requiresNotes: true, maxCharacters: 72, description: 'Choose the quantity of each number, letter and common symbol. The total must equal 72.' }] }],
+    options: [{ id: 'box-sku', label: 'Box SKU', helper: 'Choose a standard box or build a custom 72-character mix.', values: [{ id: 'en-num-73', sku: 'EN-NUM-73', label: 'English + numbers · 73 characters', price: 25, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 2 each · 3–9: 1 each · A–Z: 2 each · dot and slash: 2 each · blank space: 4' }, { id: 'numeric-72', sku: 'NUM-72', label: 'Pure numeric · 72 characters', price: 25, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 10 each · 3–9: 6 each' }, { id: 'en-num-120', sku: 'EN-NUM-120', label: 'English + numbers · 120 characters', price: 40, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 4 each · 3–9: 2 each · A–Z: 3 each · dot and slash: 2 each · blank space: 12' }, { id: 'custom-72', sku: 'CUSTOM-72', label: 'Customized · exactly 72 characters', price: 0, quoteOnly: true, requiresNotes: true, maxCharacters: 72, description: 'Choose the quantity of each number, letter and common symbol. The total must equal 72.' }] }],
   },
 ];
 
