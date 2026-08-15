@@ -10,8 +10,8 @@ Static storefront for `codingmachinestore.com`, built around the first two ready
 This version uses Astro with React islands for the cart and product gallery. Install dependencies and start the development server:
 
 ```powershell
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 Then open `http://localhost:4321`.
