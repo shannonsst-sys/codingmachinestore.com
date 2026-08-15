@@ -1,12 +1,17 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import { categories } from '../../data/categories';
+import { categories, getChildren } from '../../data/categories';
 import { products } from '../../data/products';
+
 export function getStaticPaths() { return categories.map((category) => ({ params: { slug: category.slug }, props: { category } })); }
 const { category } = Astro.props;
-const matchingProducts = products.filter((product) => product.category === category.slug);
+const children = getChildren(category.slug);
+const matchingProducts = products.filter((product) => product.category === category.slug || product.parentCategory === category.slug);
 ---
 <SiteLayout title={`${category.title} | Coding Machine Store`} description={category.description}>
   <section class="category-hero"><span class="eyebrow">{category.label}</span><h1>{category.title}</h1><p>{category.description}</p></section>
-  <section class="section">{matchingProducts.length ? <div class="product-grid">{matchingProducts.map((product) => <article class="product-card"><a class="product-card-media" href={`/products/${product.slug}/`}><img src={product.hero} alt={product.name} /></a><div class="product-card-body"><span class="eyebrow">{product.model}</span><h3><a href={`/products/${product.slug}/`}>{product.name}</a></h3><p>{product.description}</p><div class="product-meta"><span class="price">${product.price.toFixed(2)}</span><a class="button button-dark" href={`/products/${product.slug}/`}>View product</a></div></div></article>)}</div> : <div class="category-card"><span class="eyebrow">Coming next</span><strong>Products are being prepared.</strong><p>This category is already in the catalog structure. New product pages will be added as soon as the matching product files and specifications are ready.</p><a class="button button-dark" href="mailto:info@codingmachinestore.com?subject=Product%20availability%20request">Ask about this category</a></div>}</section>
+  <section class="section category-content">
+    {children.length > 0 && <div class="category-subsections"><div class="section-heading"><div><span class="eyebrow">Browse by method</span><h2>Choose the coding method.</h2></div><p class="section-intro">Every product sits inside a clear product family, so related machines and compatible accessories stay together.</p></div><div class="category-grid">{children.map((child) => <a class="category-card" href={`/category/${child.slug}/`}><span class="eyebrow">{child.label}</span><strong>{child.title}</strong><p>{child.description}</p><span>View category →</span></a>)}</div></div>}
+    <div class="category-products"><div class="section-heading"><div><span class="eyebrow">{matchingProducts.length ? 'Available now' : 'Coming next'}</span><h2>{matchingProducts.length ? 'Products in this category.' : 'Products are being prepared.'}</h2></div>{matchingProducts.length === 0 && <p class="section-intro">This category is already in the catalog structure. New product pages will be added as soon as the matching product files and specifications are ready.</p>}</div>{matchingProducts.length ? <div class="product-grid">{matchingProducts.map((product) => <article class="product-card"><a class="product-card-media" href={`/products/${product.slug}/`}><img src={product.hero} alt={product.name} /></a><div class="product-card-body"><span class="eyebrow">{product.model} · {product.subcategory}</span><h3><a href={`/products/${product.slug}/`}>{product.name}</a></h3><p>{product.description}</p><div class="product-meta"><span class="price">${product.price.toFixed(2)}</span><a class="button button-dark" href={`/products/${product.slug}/`}>View product</a></div></div></article>)}</div> : <div class="category-card"><span class="eyebrow">Coming next</span><strong>Products are being prepared.</strong><p>Send us the product files and specifications when you are ready, and this category will use the same product-page layout.</p><a class="button button-dark" href="mailto:info@codingmachinestore.com?subject=Product%20availability%20request">Ask about this category</a></div>}</div>
+  </section>
 </SiteLayout>
