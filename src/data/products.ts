@@ -6,6 +6,7 @@ export type Product = {
   category: string;
   parentCategory: string;
   subcategory: string;
+  useCategory: string;
   price: number;
   badge: string;
   hero: string;
@@ -19,7 +20,7 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    slug: 'dy-8', model: 'DY-8', name: 'Hand-Operated Hot Ribbon Coding Machine', type: 'Manual hot ribbon coder', category: 'ribbon-coding-machines', parentCategory: 'ribbon-coding-machines', subcategory: 'ribbon', price: 40, badge: 'Entry point',
+    slug: 'dy-8', model: 'DY-8', name: 'Hand-Operated Hot Ribbon Coding Machine', type: 'Manual hot ribbon coder', category: 'ribbon-coding-machines', parentCategory: 'ribbon-coding-machines', subcategory: 'ribbon', useCategory: 'ribbon-standalone', price: 40, badge: 'Entry point',
     hero: '/assets/products/dy-8/hero.png',
     gallery: ['/assets/products/dy-8/hero.png', '/assets/products/dy-8/side-1.jpeg', '/assets/products/dy-8/side-2.jpeg', '/assets/products/dy-8/side-3.jpeg', '/assets/products/dy-8/detail-1.png', '/assets/products/dy-8/detail-2.png'],
     detailGallery: Array.from({ length: 9 }, (_, index) => `/assets/products/dy-8/details-gallery/${index + 1}.png`),
@@ -29,7 +30,7 @@ export const products: Product[] = [
     specs: [['Coding speed', '1–90 prints/min'], ['Power supply', '220 V / 50 Hz'], ['Power consumption', '60 W'], ['Ribbon width', '25–35 mm'], ['Net weight', '2.6 kg'], ['Dimensions', '286 × 263 × 196 mm']],
   },
   {
-    slug: 'hp-241b', model: 'HP-241B', name: 'Electric Hot Ribbon Coding Machine', type: 'Electric hot ribbon coder', category: 'ribbon-coding-machines', parentCategory: 'ribbon-coding-machines', subcategory: 'ribbon', price: 160, badge: 'Best value',
+    slug: 'hp-241b', model: 'HP-241B', name: 'Electric Hot Ribbon Coding Machine', type: 'Electric hot ribbon coder', category: 'ribbon-coding-machines', parentCategory: 'ribbon-coding-machines', subcategory: 'ribbon', useCategory: 'ribbon-standalone', price: 160, badge: 'Best value',
     hero: '/assets/products/hp-241b/hero.png',
     gallery: ['/assets/products/hp-241b/hero.png', '/assets/products/hp-241b/side-1.png', '/assets/products/hp-241b/side-2.png', '/assets/products/hp-241b/side-3.png', '/assets/products/hp-241b/detail-1.png', '/assets/products/hp-241b/detail-2.png'],
     detailGallery: Array.from({ length: 12 }, (_, index) => `/assets/products/hp-241b/details-gallery/${index + 1}.png`),

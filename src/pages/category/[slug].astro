@@ -6,7 +6,7 @@ import { products } from '../../data/products';
 export function getStaticPaths() { return categories.map((category) => ({ params: { slug: category.slug }, props: { category } })); }
 const { category } = Astro.props;
 const children = getChildren(category.slug);
-const matchingProducts = products.filter((product) => product.category === category.slug || product.parentCategory === category.slug);
+const matchingProducts = products.filter((product) => product.category === category.slug || product.parentCategory === category.slug || product.useCategory === category.slug);
 ---
 <SiteLayout title={`${category.title} | Coding Machine Store`} description={category.description}>
   <section class="category-hero"><span class="eyebrow">{category.label}</span><h1>{category.title}</h1><p>{category.description}</p></section>
