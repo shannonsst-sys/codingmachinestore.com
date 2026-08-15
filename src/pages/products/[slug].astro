@@ -1,0 +1,14 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ProductGallery from '../../components/ProductGallery';
+import AddToCartButton from '../../components/AddToCartButton';
+import { products } from '../../data/products';
+export function getStaticPaths() { return products.map((product) => ({ params: { slug: product.slug }, props: { product } })); }
+const { product } = Astro.props;
+---
+<SiteLayout title={`${product.model} | Coding Machine Store`} description={product.description}>
+  <div class="breadcrumbs"><a href="/">Home</a> / <a href={`/category/${product.category}/`}>{product.category}</a> / {product.model}</div>
+  <section class="product-layout"><ProductGallery client:load name={`${product.model} ${product.name}`} images={product.gallery} /><div class="product-info"><span class="eyebrow">{product.model} · {product.type}</span><h1>{product.name}</h1><p class="lead">{product.description}</p><div class="product-price">${product.price.toFixed(2)} <small>USD / unit</small></div><AddToCartButton client:load id={product.slug} name={`${product.model} ${product.name}`} price={product.price} /><a class="button" href="https://formspree.io/f/xppalleq">Request a quote with this product →</a><p class="shipping-note"><strong>Shipping calculated separately.</strong><br />Send your delivery address with the quote and we will reply with the best available shipping option.</p></div></section>
+  <section class="details"><div><span class="eyebrow">Product notes</span><h2>Built for a clear mark.</h2><p>{product.longDescription}</p><p><strong>Typical applications:</strong><br />{product.applications}</p></div><div><span class="eyebrow">Specifications</span><dl class="specs">{product.specs.map(([label, value]) => <div class="spec"><dt>{label}</dt><dd>{value}</dd></div>)}</dl></div></section>
+  <section class="detail-gallery"><span class="eyebrow">See the machine up close.</span>{product.detailGallery.map((image) => <img src={image} alt={`${product.model} product detail`} loading="lazy" />)}</section>
+</SiteLayout>

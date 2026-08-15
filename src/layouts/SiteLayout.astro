@@ -1,0 +1,14 @@
+---
+import '../styles/global.css';
+import CartIsland from '../components/CartIsland';
+const { title = 'Coding Machine Store', description = 'Factory-direct coding equipment from Quanzhou, China.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><link rel="icon" href="/favicon.svg" /><title>{title}</title></head>
+  <body>
+    <header class="site-header"><a class="brand" href="/">CODING<span>MACHINE</span>STORE</a><nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/category/inkjet-printers/">Inkjet printers</a><a href="/category/coding-machines/">Coding machines</a><a href="/category/coding-ribbons-consumables/">Consumables</a></nav><CartIsland client:load /></header>
+    <main><slot /></main>
+    <footer class="site-footer"><div><span class="eyebrow">CODING MACHINE STORE</span><p>Factory-direct coding equipment from Quanzhou, China.</p></div><div class="footer-contact"><a href="mailto:info@codingmachinestore.com">info@codingmachinestore.com</a><a href="https://wa.me/8618702620038">WhatsApp +86 187 0262 0038</a></div></footer>
+  </body>
+</html>

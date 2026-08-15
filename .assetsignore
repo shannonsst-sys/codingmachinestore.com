@@ -1,7 +1,7 @@
-/.git/
-/.github/
-/.gitignore
-/.assetsignore
-/README.md
-/worker.js
-/wrangler.jsonc
+**/.git/
+**/.github/
+**/.gitignore
+**/.assetsignore
+**/README.md
+**/worker.js
+**/wrangler.jsonc

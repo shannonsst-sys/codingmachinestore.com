@@ -7,6 +7,13 @@
 /output/
 /output-home.png
 
+# Astro build artifacts and dependencies
+/dist/
+/.astro/
+/node_modules/
+/pnpm-debug.log*
+/astro-site/
+
 # Accidental duplicate detail files from the source import
 /public/assets/products/dy-8/details
 /public/assets/products/hp-241b/details
