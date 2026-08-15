@@ -20,6 +20,7 @@ export type Product = {
   specs: [string, string][];
   options?: ProductOption[];
   notesPrompt?: string;
+  relatedAccessories?: string[];
 };
 
 export type ProductOptionValue = {
@@ -51,6 +52,7 @@ export const products: Product[] = [
     longDescription: 'The DY-8 uses hot-stamping ribbon instead of liquid ink to create clean, practical marks on soft packaging. Its hand-operated format is easy to place near a packing station and is particularly suited to food, pharmaceutical and hygiene-sensitive applications.',
     applications: 'Food packaging · Pharmaceutical packaging · Plastic films · Laminated pouches',
     specs: [['Coding speed', '1–90 prints/min'], ['Power supply', '220 V / 50 Hz'], ['Power consumption', '60 W'], ['Ribbon width', '25–35 mm'], ['Net weight', '2.6 kg'], ['Dimensions', '286 × 263 × 196 mm']],
+    relatedAccessories: ['copper-type-characters', 'copper-type-character-box'],
   },
   {
     slug: 'hp-241b', model: 'HP-241B', name: 'Electric Hot Ribbon Coding Machine', type: 'Electric hot ribbon coder', category: 'ribbon-coding-machines', parentCategory: 'ribbon-coding-machines', subcategory: 'ribbon', useCategory: 'ribbon-standalone', price: 160, badge: 'Best value',
@@ -61,6 +63,7 @@ export const products: Product[] = [
     longDescription: 'The HP-241B is designed for repeatable electric hot ribbon coding. Movable copper characters are easy to install and replace, while the special character-changing structure supports different work areas and packaging formats.',
     applications: 'Aluminium foil · Plastic film · Kraft paper · Paper cards',
     specs: [['Printing rows', '1–3 rows'], ['Printing speed', '20–120 prints/min'], ['Power supply', '220 V / 150 W'], ['Warm-up time', '5–10 min'], ['Ribbon width', '25–30 mm'], ['Net weight', 'Approx. 7.0 kg'], ['Dimensions', '25 × 22 × 33 cm'], ['Character size', '2 × 4 × 15 mm']],
+    relatedAccessories: ['copper-type-characters', 'copper-type-character-box'],
   },
   {
     slug: 'copper-type-characters', model: 'Copper Type Characters', name: 'Copper Type Characters', type: 'Ribbon machine part', category: 'ribbon-machine-parts', parentCategory: 'ribbon-consumables', subcategory: 'machine part', useCategory: 'ribbon-standalone', price: 0.3, priceLabel: 'From $0.30', priceUnit: 'USD / piece', badge: 'Movable type',
@@ -82,9 +85,9 @@ export const products: Product[] = [
     description: 'Ready-to-use copper character boxes for ribbon coding machines, supplied with brass characters, holder tools and layouts for English, numbers or custom combinations.',
     longDescription: 'Choose a standard character box for common date and batch coding, or request a customized box with the letters, numbers and symbols your packaging line needs. The organized product images show the included accessories, character layouts, compatible coding machines and the pure copper type construction.',
     applications: 'DY-8 · HP-241B · HP-30 · DY-6 · Semi-automatic and automatic ribbon coders',
-    specs: [['Standard English + numbers', '73-character layout · $25'], ['Numeric box', '72-character layout · $25'], ['English + numbers', '120-character layout · $40'], ['Customized box', 'Exactly 72 characters · Quote on request'], ['Included accessories', 'Metal stamp holder · Hex key · Tweezers']],
+    specs: [['Standard English + numbers', '73-character layout · $25'], ['Numeric box', '72-character layout · $25'], ['English + numbers', '120-character layout · $40'], ['Customized box', 'Exactly 72 characters · $25'], ['Included accessories', 'Metal stamp holder · Hex key · Tweezers']],
     notesPrompt: 'Enter the quantity needed for each character. The total must be exactly 72 pieces.',
-    options: [{ id: 'box-sku', label: 'Box SKU', helper: 'Choose a standard box or build a custom 72-character mix.', values: [{ id: 'en-num-73', sku: 'EN-NUM-73', label: 'English + numbers · 73 characters', price: 25, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 2 each · 3–9: 1 each · A–Z: 2 each · dot and slash: 2 each · blank space: 4' }, { id: 'numeric-72', sku: 'NUM-72', label: 'Pure numeric · 72 characters', price: 25, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 10 each · 3–9: 6 each' }, { id: 'en-num-120', sku: 'EN-NUM-120', label: 'English + numbers · 120 characters', price: 40, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 4 each · 3–9: 2 each · A–Z: 3 each · dot and slash: 2 each · blank space: 12' }, { id: 'custom-72', sku: 'CUSTOM-72', label: 'Customized · exactly 72 characters', price: 0, quoteOnly: true, requiresNotes: true, maxCharacters: 72, description: 'Choose the quantity of each number, letter and common symbol. The total must equal 72.' }] }],
+    options: [{ id: 'box-sku', label: 'Box SKU', helper: 'Choose a standard box or build a custom 72-character mix.', values: [{ id: 'en-num-73', sku: 'EN-NUM-73', label: 'English + numbers · 73 characters', price: 25, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 2 each · 3–9: 1 each · A–Z: 2 each · dot and slash: 2 each · blank space: 4' }, { id: 'numeric-72', sku: 'NUM-72', label: 'Pure numeric · 72 characters', price: 25, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 10 each · 3–9: 6 each' }, { id: 'en-num-120', sku: 'EN-NUM-120', label: 'English + numbers · 120 characters', price: 40, description: 'Pre-set layout based on the supplied contents reference. No character quantities required.', contents: '0, 1, 2: 4 each · 3–9: 2 each · A–Z: 3 each · dot and slash: 2 each · blank space: 12' }, { id: 'custom-72', sku: 'CUSTOM-72', label: 'Customized · exactly 72 characters', price: 25, requiresNotes: true, maxCharacters: 72, description: 'Choose the quantity of each number, letter and common symbol. The total must equal 72.' }] }],
   },
 ];
 
