@@ -20,7 +20,7 @@
 .cart-modal-header h2 small { color:var(--muted); font: .75rem 'DM Mono',monospace; letter-spacing:0; }
 .cart-modal-close { width:42px; height:42px; padding:0; border:1px solid var(--line); background:white; color:var(--ink); font-size:1.8rem; line-height:1; cursor:pointer; }
 .cart-modal-close:hover { color:var(--accent); border-color:var(--accent); }
-.cart-modal-items { min-height:0; overflow:auto; }
+.cart-modal-items { flex:1; min-height:0; overflow:auto; }
 .cart-modal-line { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:24px; padding:22px 0; border-bottom:1px solid var(--line); }
 .cart-modal-line-copy { display:flex; flex-direction:column; gap:7px; min-width:0; }
 .cart-modal-line-copy strong { font-size:1.02rem; }
