@@ -86,7 +86,7 @@ pageLightbox.hidden = true;
 pageLightbox.setAttribute('role', 'dialog');
 pageLightbox.setAttribute('aria-modal', 'true');
 pageLightbox.setAttribute('aria-label', 'Product image viewer');
-pageLightbox.innerHTML = '<button type="button" class="page-lightbox-close" data-page-lightbox-close aria-label="Close image viewer">×</button><button type="button" class="page-lightbox-nav page-lightbox-prev" data-page-lightbox-prev aria-label="Previous image">←</button><figure><img data-page-lightbox-image alt="" /><figcaption data-page-lightbox-caption></figcaption></figure><button type="button" class="page-lightbox-nav page-lightbox-next" data-page-lightbox-next aria-label="Next image">→</button>';
+pageLightbox.innerHTML = '<button type="button" class="page-lightbox-close" data-page-lightbox-close aria-label="Close image viewer">×</button><button type="button" class="page-lightbox-nav page-lightbox-prev" data-page-lightbox-prev aria-label="Previous image">←</button><figure><img class="page-lightbox-image" data-page-lightbox-image alt="" /><figcaption data-page-lightbox-caption></figcaption></figure><button type="button" class="page-lightbox-nav page-lightbox-next" data-page-lightbox-next aria-label="Next image">→</button>';
 document.body.append(pageLightbox);
 
 const pageLightboxImage = pageLightbox.querySelector('[data-page-lightbox-image]');

@@ -21,7 +21,7 @@ export default function ImageLightbox({ src, alt }: Props) {
     </button>
     {open && <div className="lightbox single-lightbox" role="dialog" aria-modal="true" aria-label={alt} onClick={() => setOpen(false)}>
       <button type="button" className="lightbox-close" onClick={() => setOpen(false)} aria-label="Close">×</button>
-      <img src={src} alt={alt} onClick={(event) => event.stopPropagation()} />
+      <img className="lightbox-image" src={src} alt={alt} onClick={(event) => event.stopPropagation()} />
     </div>}
   </>;
 }
