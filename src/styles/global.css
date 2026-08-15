@@ -26,6 +26,7 @@
 .image-lightbox-trigger span { position:absolute; left:14px; bottom:12px; padding:6px 8px; color:white; background:#111513d9; font:.65rem 'DM Mono',monospace; text-transform:uppercase; opacity:0; transition:opacity .2s; }
 .image-lightbox-trigger:hover span,.image-lightbox-trigger:focus-visible span { opacity:1; }
 .single-lightbox { grid-template-columns:1fr; }
+.lightbox img { mix-blend-mode:normal; opacity:1; aspect-ratio:auto; }
 .story-image .image-lightbox-trigger { flex:1; min-height:360px; }
 .detail-gallery figure .image-lightbox-trigger { aspect-ratio:1/.82; }
 .details h2 em { color:var(--accent); font-style:normal; }
