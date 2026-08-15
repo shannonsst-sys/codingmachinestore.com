@@ -65,17 +65,78 @@ function renderProductPage() {
   document.querySelector('[data-standalone-applications]').textContent = product.applications;
   document.querySelector('[data-standalone-specs]').innerHTML = product.specs.map(([label, value]) => `<div class="spec-item"><span>${label}</span><strong>${value}</strong></div>`).join('');
   const gallery = product.images.map((name) => `${product.imageRoot}${name}`);
-  const mainImage = document.querySelector('[data-standalone-main]'); mainImage.src = gallery[0]; mainImage.alt = product.title;
-  document.querySelector('[data-standalone-thumbs]').innerHTML = gallery.map((src, index) => `<button type="button" class="${index === 0 ? 'active' : ''}" data-page-thumb="${src}"><img src="${src}" alt="${product.title} view ${index + 1}" /></button>`).join('');
-  const stories = product.detailStories.map(([title, body, tags], index) => `<article class="detail-story ${index % 2 ? 'detail-story-reverse' : ''}"><div class="detail-story-media"><img src="${product.imageRoot}details-gallery/${index + 1}.png" alt="${product.model} ${title}" loading="lazy" /></div><div class="detail-story-copy"><p class="eyebrow"><span>0${index + 1}</span> PRODUCT NOTE</p><h3>${title}</h3><p>${body}</p><div class="detail-tags">${tags.split(' · ').map((tag) => `<span>${tag}</span>`).join('')}</div></div></article>`).join('');
-  const remaining = Array.from({ length: Math.max(0, product.detailCount - product.detailStories.length) }, (_, index) => { const imageIndex = product.detailStories.length + index + 1; return `<img src="${product.imageRoot}details-gallery/${imageIndex}.png" alt="${product.model} additional product detail ${imageIndex}" loading="lazy" />`; }).join('');
+  const mainImage = document.querySelector('[data-standalone-main]'); mainImage.src = gallery[0]; mainImage.alt = product.title; mainImage.dataset.lightboxSrc = gallery[0]; mainImage.dataset.lightboxGroup = 'product';
+  document.querySelector('[data-standalone-thumbs]').innerHTML = gallery.map((src, index) => `<button type="button" class="${index === 0 ? 'active' : ''}" data-page-thumb="${src}" data-lightbox-src="${src}" data-lightbox-group="product"><img src="${src}" alt="${product.title} view ${index + 1}" /></button>`).join('');
+  const stories = product.detailStories.map(([title, body, tags], index) => `<article class="detail-story ${index % 2 ? 'detail-story-reverse' : ''}"><div class="detail-story-media"><img src="${product.imageRoot}details-gallery/${index + 1}.png" data-lightbox-src="${product.imageRoot}details-gallery/${index + 1}.png" data-lightbox-group="details" alt="${product.model} ${title}" loading="lazy" /></div><div class="detail-story-copy"><p class="eyebrow"><span>0${index + 1}</span> PRODUCT NOTE</p><h3>${title}</h3><p>${body}</p><div class="detail-tags">${tags.split(' · ').map((tag) => `<span>${tag}</span>`).join('')}</div></div></article>`).join('');
+  const remaining = Array.from({ length: Math.max(0, product.detailCount - product.detailStories.length) }, (_, index) => { const imageIndex = product.detailStories.length + index + 1; return `<img src="${product.imageRoot}details-gallery/${imageIndex}.png" data-lightbox-src="${product.imageRoot}details-gallery/${imageIndex}.png" data-lightbox-group="details" alt="${product.model} additional product detail ${imageIndex}" loading="lazy" />`; }).join('');
   document.querySelector('[data-standalone-detail-gallery]').innerHTML = `${stories}${remaining ? `<div class="detail-more"><p class="eyebrow"><span>MORE</span> REFERENCE IMAGES</p><div class="detail-more-grid">${remaining}</div></div>` : ''}`;
   updatePageCartCount();
 }
 
+const pageLightbox = document.createElement('div');
+pageLightbox.className = 'page-image-lightbox';
+pageLightbox.hidden = true;
+pageLightbox.setAttribute('role', 'dialog');
+pageLightbox.setAttribute('aria-modal', 'true');
+pageLightbox.setAttribute('aria-label', 'Product image viewer');
+pageLightbox.innerHTML = '<button type="button" class="page-lightbox-close" data-page-lightbox-close aria-label="Close image viewer">×</button><button type="button" class="page-lightbox-nav page-lightbox-prev" data-page-lightbox-prev aria-label="Previous image">←</button><figure><img data-page-lightbox-image alt="" /><figcaption data-page-lightbox-caption></figcaption></figure><button type="button" class="page-lightbox-nav page-lightbox-next" data-page-lightbox-next aria-label="Next image">→</button>';
+document.body.append(pageLightbox);
+
+const pageLightboxImage = pageLightbox.querySelector('[data-page-lightbox-image]');
+const pageLightboxCaption = pageLightbox.querySelector('[data-page-lightbox-caption]');
+let pageLightboxItems = [];
+let pageLightboxIndex = 0;
+
+function showPageLightboxImage() {
+  const item = pageLightboxItems[pageLightboxIndex];
+  if (!item) return;
+  pageLightboxImage.src = item.src;
+  pageLightboxImage.alt = item.alt;
+  pageLightboxCaption.textContent = `${pageLightboxIndex + 1} / ${pageLightboxItems.length}`;
+}
+
+function openPageLightbox(items, index) {
+  pageLightboxItems = items;
+  pageLightboxIndex = Math.max(0, index);
+  showPageLightboxImage();
+  pageLightbox.hidden = false;
+  document.body.classList.add('image-viewer-open');
+}
+
+function closePageLightbox() {
+  pageLightbox.hidden = true;
+  document.body.classList.remove('image-viewer-open');
+}
+
+function movePageLightbox(step) {
+  if (!pageLightboxItems.length) return;
+  pageLightboxIndex = (pageLightboxIndex + step + pageLightboxItems.length) % pageLightboxItems.length;
+  showPageLightboxImage();
+}
+
+pageLightbox.addEventListener('click', (event) => {
+  if (event.target === pageLightbox || event.target.closest('[data-page-lightbox-close]')) closePageLightbox();
+  if (event.target.closest('[data-page-lightbox-prev]')) movePageLightbox(-1);
+  if (event.target.closest('[data-page-lightbox-next]')) movePageLightbox(1);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (pageLightbox.hidden) return;
+  if (event.key === 'Escape') closePageLightbox();
+  if (event.key === 'ArrowLeft') movePageLightbox(-1);
+  if (event.key === 'ArrowRight') movePageLightbox(1);
+});
+
 document.addEventListener('click', (event) => {
+  const lightboxTarget = event.target.closest('[data-lightbox-src]');
+  if (lightboxTarget) {
+    const group = lightboxTarget.dataset.lightboxGroup || 'product';
+    const items = [...document.querySelectorAll(`[data-lightbox-group="${group}"]`)].map((item) => ({ src: item.dataset.lightboxSrc, alt: item.querySelector('img')?.alt || item.alt || product.title }));
+    const index = items.findIndex((item) => item.src === lightboxTarget.dataset.lightboxSrc);
+    openPageLightbox(items, Math.max(0, index));
+  }
   const thumb = event.target.closest('[data-page-thumb]');
-  if (thumb) { document.querySelector('[data-standalone-main]').src = thumb.dataset.pageThumb; document.querySelectorAll('[data-page-thumb]').forEach((item) => item.classList.remove('active')); thumb.classList.add('active'); }
+  if (thumb) { document.querySelector('[data-standalone-main]').src = thumb.dataset.pageThumb; document.querySelector('[data-standalone-main]').dataset.lightboxSrc = thumb.dataset.pageThumb; document.querySelectorAll('[data-page-thumb]').forEach((item) => item.classList.remove('active')); thumb.classList.add('active'); }
   if (event.target.closest('[data-standalone-minus]')) { pageQuantity = Math.max(1, pageQuantity - 1); document.querySelector('[data-standalone-quantity]').textContent = pageQuantity; }
   if (event.target.closest('[data-standalone-plus]')) { pageQuantity += 1; document.querySelector('[data-standalone-quantity]').textContent = pageQuantity; }
   if (event.target.closest('[data-standalone-add]')) { addPageProduct(pageQuantity); showPageToast(`${product.model} added to your cart`); }
