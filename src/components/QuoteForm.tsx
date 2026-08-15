@@ -42,10 +42,9 @@ export default function QuoteForm() {
   const validateContact = (event: FormEvent<HTMLFormElement>) => {
     const form = event.currentTarget;
     const email = (form.elements.namedItem('email') as HTMLInputElement | null)?.value.trim();
-    const whatsapp = (form.elements.namedItem('whatsapp') as HTMLInputElement | null)?.value.trim();
-    if (!email && !whatsapp) {
+    if (!email) {
       event.preventDefault();
-      setError('Please enter an email address or WhatsApp number so we can reply.');
+      setError('Please enter your email address so we can reply to your quote request.');
       return;
     }
     setError('');
@@ -59,12 +58,12 @@ export default function QuoteForm() {
     <div className="quote-form-grid">
       <label><span>Your name *</span><input name="name" required placeholder="Your name or company" /></label>
       <label><span>Country / delivery address *</span><input name="address" required placeholder="City, country — shipping is quoted separately" /></label>
-      <label><span>Email (optional)</span><input type="email" name="email" placeholder="you@example.com" /></label>
+      <label><span>Email *</span><input type="email" name="email" required placeholder="you@example.com" /></label>
       <label><span>WhatsApp (optional)</span><input name="whatsapp" placeholder="+ country code and number" /></label>
     </div>
     <label><span>Products and requirements</span><textarea name="message" rows={5} placeholder="Tell us what you need to print, the packaging material, quantity and any compatibility questions." defaultValue={selectedProducts === 'No products selected yet.' ? '' : selectedProducts} /></label>
     {error && <p className="quote-form-error" role="alert">{error}</p>}
     <button className="button button-dark" type="submit">Send quote request <span>↗</span></button>
-    <p className="quote-form-note">This form is handled by Formspree. We will reply by email or WhatsApp; shipping is calculated separately after receiving your address.</p>
+    <p className="quote-form-note">This form is handled by Formspree. Email is required so we can reply; WhatsApp is optional. Shipping is calculated separately after receiving your address.</p>
   </form>;
 }
