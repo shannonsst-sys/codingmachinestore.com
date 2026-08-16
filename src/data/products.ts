@@ -35,6 +35,7 @@ export type ProductOptionValue = {
   requiresNotes?: boolean;
   maxCharacters?: number;
   contents?: string;
+  characterQuantities?: boolean;
 };
 
 export type ProductOption = {
@@ -79,7 +80,7 @@ export const products: Product[] = [
     applications: 'DY-8 · HP-241B · Ribbon coding machines',
     specs: [['Available sizes', '2*3 · 2*4'], ['Standard price', '$0.30 / piece'], ['Character range', '0–9 · A–Z · . · / · blank space'], ['Custom option', 'Quote on request']],
     notesPrompt: 'List the quantity needed for each character, for example: 0×10, 1×10, A×4, Z×2, .×2, /×2, blank×4.',
-    options: [{ id: 'character-size', label: 'Character SKU', helper: 'Select the copper character size. Price is per piece.', values: [{ id: '2x3', sku: '2*3', label: '2 × 3 mm character', price: 0.3 }, { id: '2x4', sku: '2*4', label: '2 × 4 mm character', price: 0.3 }, { id: 'customized', sku: 'CUSTOMIZED', label: 'Customized character', price: 0, quoteOnly: true, requiresNotes: true, description: 'Send the required letters, numbers and symbols for a direct quotation.' }] }],
+    options: [{ id: 'character-size', label: 'Character SKU', helper: 'Select the copper character size, then enter the quantity needed for each character.', values: [{ id: '2x3', sku: '2*3', label: '2 × 3 mm character', price: 0.3, characterQuantities: true, description: 'Choose the quantities for each number, letter and common symbol. The total and price are calculated automatically at $0.30 per piece.' }, { id: '2x4', sku: '2*4', label: '2 × 4 mm character', price: 0.3, characterQuantities: true, description: 'Choose the quantities for each number, letter and common symbol. The total and price are calculated automatically at $0.30 per piece.' }, { id: 'customized', sku: 'CUSTOMIZED', label: 'Customized character', price: 0, quoteOnly: true, requiresNotes: true, description: 'Send the required letters, numbers and symbols for a direct quotation.' }] }],
   },
   {
     slug: 'copper-type-character-box', model: 'Copper Type Character Box', name: 'Copper Type Character Box', type: 'Ribbon machine part', category: 'ribbon-machine-parts', parentCategory: 'ribbon-consumables', subcategory: 'machine part', useCategory: 'ribbon-standalone', price: 25, priceLabel: 'From $25.00', priceUnit: 'USD / box', badge: 'Ready character sets',
