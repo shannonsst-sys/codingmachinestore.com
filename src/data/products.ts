@@ -21,6 +21,7 @@ export type Product = {
   options?: ProductOption[];
   notesPrompt?: string;
   relatedAccessories?: string[];
+  videoUrl?: string;
 };
 
 export type ProductOptionValue = {
@@ -53,6 +54,7 @@ export const products: Product[] = [
     applications: 'Food packaging · Pharmaceutical packaging · Plastic films · Laminated pouches',
     specs: [['Coding speed', '1–90 prints/min'], ['Power supply', '220 V / 50 Hz'], ['Power consumption', '60 W'], ['Ribbon width', '25–35 mm'], ['Net weight', '2.6 kg'], ['Dimensions', '286 × 263 × 196 mm']],
     relatedAccessories: ['copper-type-characters', 'copper-type-character-box'],
+    videoUrl: 'https://www.youtube.com/shorts/H68jSVME708',
   },
   {
     slug: 'hp-241b', model: 'HP-241B', name: 'Electric Hot Ribbon Coding Machine', type: 'Electric hot ribbon coder', category: 'ribbon-coding-machines', parentCategory: 'ribbon-coding-machines', subcategory: 'ribbon', useCategory: 'ribbon-standalone', price: 160, badge: 'Best value',
