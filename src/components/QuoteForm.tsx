@@ -52,6 +52,11 @@ export default function QuoteForm() {
 
   return <form className="quote-form-modern" action="https://formspree.io/f/xppalleq" method="POST" onSubmit={validateContact}>
     <input type="hidden" name="_subject" value="New Coding Machine Store quote request" />
+    <input type="hidden" name="company_name" value="M. H. S. City" />
+    <input type="hidden" name="company_address_line" value="203 Qiaoxi Street, Shuitou Town, Nanan City" />
+    <input type="hidden" name="company_city" value="Quanzhou City" />
+    <input type="hidden" name="company_province" value="Fujian Province" />
+    <input type="hidden" name="company_country" value="Mainland, China" />
     <input type="hidden" name="selected_products" value={selectedProducts} readOnly />
     <input type="hidden" name="estimated_product_total_usd" value={total.toFixed(2)} readOnly />
     <div className="quote-form-summary"><span>{cart.length ? `${cart.length} product line${cart.length === 1 ? '' : 's'} in your quote` : 'No products in your quote yet'}</span><strong>{hasQuoteOnly ? `$${total.toFixed(2)} + quote` : `$${total.toFixed(2)}`}</strong></div>
