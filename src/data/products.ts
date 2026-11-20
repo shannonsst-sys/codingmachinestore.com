@@ -187,8 +187,8 @@ export const products: Product[] = [
   {
     slug: 'a5c-handheld-inkjet-printer', model: 'A5C/A5CS', name: 'A5C Side-Held Thermal Inkjet Printer', type: 'Side-held thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 166, badge: 'Side grip',
     hero: '/assets/products/a5c-handheld-inkjet-printer/hero.png',
-    gallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png', '/assets/products/a5c-handheld-inkjet-printer/detail-1.png', '/assets/products/a5c-handheld-inkjet-printer/detail-2.png', '/assets/products/a5c-handheld-inkjet-printer/detail-3.png'],
-    detailGallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png', '/assets/products/a5c-handheld-inkjet-printer/detail-1.png', '/assets/products/a5c-handheld-inkjet-printer/detail-2.png', '/assets/products/a5c-handheld-inkjet-printer/detail-3.png'],
+    gallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png', '/assets/products/a5c-handheld-inkjet-printer/detail-1.png', '/assets/products/a5c-handheld-inkjet-printer/detail-2.png', '/assets/products/a5c-handheld-inkjet-printer/detail-3.png', '/assets/products/a5c-handheld-inkjet-printer/detail-4.png', '/assets/products/a5c-handheld-inkjet-printer/detail-5.png'],
+    detailGallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png', '/assets/products/a5c-handheld-inkjet-printer/detail-1.png', '/assets/products/a5c-handheld-inkjet-printer/detail-2.png', '/assets/products/a5c-handheld-inkjet-printer/detail-3.png', '/assets/products/a5c-handheld-inkjet-printer/detail-4.png', '/assets/products/a5c-handheld-inkjet-printer/detail-5.png'],
     description: 'A side-held thermal inkjet printer with a 3.4-inch screen for coding on the side of cartons, bottles and parts that are awkward to mark from above.',
     longDescription: 'The A5C is a side-held thermal inkjet (TIJ) printer with a 3.4-inch screen, designed for coding on the side of cartons, bottles and parts that are awkward to mark from above. Price excludes ink cartridge.',
     applications: 'Cartons · Bottles · Pipes · Side surfaces · Packaging',
@@ -217,8 +217,8 @@ export const products: Product[] = [
   {
     slug: 't9-online-inkjet-printer', model: 'T9/T9S', name: 'T9 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 188, badge: 'For production lines',
     hero: '/assets/products/t9-online-inkjet-printer/hero.png',
-    gallery: ['/assets/products/t9-online-inkjet-printer/hero.png', '/assets/products/t9-online-inkjet-printer/detail-1.png', '/assets/products/t9-online-inkjet-printer/detail-2.png', '/assets/products/t9-online-inkjet-printer/detail-3.png'],
-    detailGallery: ['/assets/products/t9-online-inkjet-printer/hero.png', '/assets/products/t9-online-inkjet-printer/detail-1.png', '/assets/products/t9-online-inkjet-printer/detail-2.png', '/assets/products/t9-online-inkjet-printer/detail-3.png'],
+    gallery: ['/assets/products/t9-online-inkjet-printer/hero.png', '/assets/products/t9-online-inkjet-printer/detail-1.png', '/assets/products/t9-online-inkjet-printer/detail-2.png', '/assets/products/t9-online-inkjet-printer/detail-3.png', '/assets/products/t9-online-inkjet-printer/detail-4.png', '/assets/products/t9-online-inkjet-printer/detail-5.png'],
+    detailGallery: ['/assets/products/t9-online-inkjet-printer/hero.png', '/assets/products/t9-online-inkjet-printer/detail-1.png', '/assets/products/t9-online-inkjet-printer/detail-2.png', '/assets/products/t9-online-inkjet-printer/detail-3.png', '/assets/products/t9-online-inkjet-printer/detail-4.png', '/assets/products/t9-online-inkjet-printer/detail-5.png'],
     description: 'An online thermal inkjet printer with a metal cover and large 5-inch touchscreen for production lines — date, batch, barcode and QR coding on cartons, bottles and packaging.',
     longDescription: 'The T9 is an online thermal inkjet (TIJ) printer with a metal cover and a large 5-inch touchscreen for production lines. A photoelectric sensor triggers date, batch, barcode and QR coding as products pass under the print head. Price excludes ink cartridge.',
     applications: 'Production lines · Cartons · Bottles · Pipes · Cables · Packaging lines',
@@ -247,8 +247,8 @@ export const products: Product[] = [
   {
     slug: 'm70-mini-inkjet-printer', model: 'M70', name: 'M70 Mini Handheld Thermal Inkjet Printer', type: 'Mini handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 125, badge: 'Mini',
     hero: '/assets/products/m70-mini-inkjet-printer/hero.png',
-    gallery: ['/assets/products/m70-mini-inkjet-printer/hero.png', '/assets/products/m70-mini-inkjet-printer/detail-1.png', '/assets/products/m70-mini-inkjet-printer/detail-2.png', '/assets/products/m70-mini-inkjet-printer/detail-3.png'],
-    detailGallery: ['/assets/products/m70-mini-inkjet-printer/hero.png', '/assets/products/m70-mini-inkjet-printer/detail-1.png', '/assets/products/m70-mini-inkjet-printer/detail-2.png', '/assets/products/m70-mini-inkjet-printer/detail-3.png'],
+    gallery: ['/assets/products/m70-mini-inkjet-printer/hero.png', '/assets/products/m70-mini-inkjet-printer/detail-1.png', '/assets/products/m70-mini-inkjet-printer/detail-2.png', '/assets/products/m70-mini-inkjet-printer/detail-3.png', '/assets/products/m70-mini-inkjet-printer/detail-4.png'],
+    detailGallery: ['/assets/products/m70-mini-inkjet-printer/hero.png', '/assets/products/m70-mini-inkjet-printer/detail-1.png', '/assets/products/m70-mini-inkjet-printer/detail-2.png', '/assets/products/m70-mini-inkjet-printer/detail-3.png', '/assets/products/m70-mini-inkjet-printer/detail-4.png'],
     description: 'A pocket-size mini handheld thermal inkjet printer with a 2.8-inch touchscreen for quick date, batch and QR coding on small products, bottles and cartons.',
     longDescription: 'The M70 is a pocket-size mini handheld thermal inkjet (TIJ) printer with a 2.8-inch touchscreen for quick date, batch and QR coding on small products, bottles and cartons. Price excludes ink cartridge.',
     applications: 'Small products · Bottles · Cartons · Labels · Retail',
