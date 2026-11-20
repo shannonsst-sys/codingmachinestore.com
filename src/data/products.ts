@@ -145,7 +145,7 @@ export const products: Product[] = [
     specs: [['Power supply', 'AC 220 V / 50 Hz, 180 W; AC 110 V / 60 Hz export/custom'], ['Printing speed', '≤300 impressions/min (depends on object size)'], ['Object size', 'Length up to 500 mm; width up to 180 mm standard, up to 350 mm widened'], ['Print position', 'Single side 60–250 mm, freely adjustable'], ['Printing lines', 'T-type 1 line, max 10 characters/line; R-type up to 8 lines, max 8 characters/line'], ['Type size', '2.0T, 2.5T, 3.0T standard (18PT, 6*7T custom); default type box 9PT-T, 2 × 3 mm characters'], ['Solid ink roll', 'Φ36 × 32 mm standard, black supplied; Φ36 × 16 / 36 × 36 / 36 × 40 mm optional; black / blue / red / white'], ['Dimensions', '440 × 345 × 280 mm standard; 440 × 540 × 280 mm widened'], ['Net weight', '22 kg standard / 24 kg widened'], ['Shell', 'Painted iron shell standard; stainless-steel shell option']],
   },
   {
-    slug: 'a3-handheld-inkjet-printer', model: 'A3/A3S', name: 'A3 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 118, badge: 'Entry point',
+    slug: 'a3-handheld-inkjet-printer', model: 'A3/A3S', name: 'A3 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 138, badge: 'Entry point',
     hero: '/assets/products/a3-handheld-inkjet-printer/hero.png',
     gallery: ['/assets/products/a3-handheld-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/a3-handheld-inkjet-printer/hero.png'],
@@ -155,7 +155,7 @@ export const products: Product[] = [
     specs: [['Print height', 'A3: 12.7 mm; A3S: 25.4 mm'], ['Print resolution', '300–600 dpi'], ['Print speed', '≤30 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Text, date/time, batch, serial number, logo, barcode, QR code'], ['Ink cartridge', '42 ml TIJ cartridge; water-based / solvent quick-dry / oil-based; black, red, white, blue, yellow'], ['Screen', '4.3-inch touchscreen'], ['Shell', 'Plastic shell'], ['Synchronizer', 'Built-in electronic synchronizer'], ['Power supply', '16.8 V lithium battery + charger'], ['Dimensions', '240 × 130 × 100 mm'], ['Warranty', '12 months']],
   },
   {
-    slug: 'a5-handheld-inkjet-printer', model: 'A5/A5S', name: 'A5 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 135, badge: 'Metal shell',
+    slug: 'a5-handheld-inkjet-printer', model: 'A5/A5S', name: 'A5 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 155, badge: 'Metal shell',
     hero: '/assets/products/a5-handheld-inkjet-printer/hero.png',
     gallery: ['/assets/products/a5-handheld-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/a5-handheld-inkjet-printer/hero.png'],
@@ -165,7 +165,7 @@ export const products: Product[] = [
     specs: [['Print height', 'A5: 12.7 mm; A5S: 25.4 mm'], ['Print resolution', '300 dpi / 600 dpi'], ['Print speed', '<30 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Text, graphics, barcode, date/time, serial number, variable code; Code 128, UPC, EAN, Code 39, QR code'], ['Counter', 'Up to 9 digits, multiple counter groups'], ['Graphics', 'BMP 24-bit, max 145 px height; U disk import (TXT / BMP24)'], ['Ink cartridge', '42 ml TIJ cartridge; 9 V for dry ink, 11 V for water / oil ink; ink density 1–6 grades'], ['Screen', '4.3-inch resistive touchscreen, embedded operating system'], ['Shell', 'Metal shell'], ['Synchronizer', 'External synchronizer or V-wheel option; microswitch button standard'], ['Online use', 'Handheld / pipeline switching; photoelectric delay; online speed up to 10000 Hz'], ['Power supply', '16.8 V, 1–1.5 A standard charger'], ['Warranty', '12 months']],
   },
   {
-    slug: 'a9-handheld-inkjet-printer', model: 'A9/A9S', name: 'A9 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 180, badge: '5-inch screen',
+    slug: 'a9-handheld-inkjet-printer', model: 'A9/A9S', name: 'A9 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 200, badge: '5-inch screen',
     hero: '/assets/products/a9-handheld-inkjet-printer/hero.png',
     gallery: ['/assets/products/a9-handheld-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/a9-handheld-inkjet-printer/hero.png'],
@@ -175,7 +175,7 @@ export const products: Product[] = [
     specs: [['Print height', 'A9: 12.7 mm; A9S: 25.4 mm'], ['Print resolution', '300–600 dpi'], ['Print speed', '≤30 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Text, date/time, batch, serial number, logo, barcode, QR code'], ['Ink cartridge', '42 ml TIJ cartridge; water-based / solvent quick-dry / oil-based; black, white, red, blue, yellow, green'], ['Screen', '5-inch touchscreen'], ['Shell', 'ABS shell'], ['Synchronizer', 'External synchronizer'], ['Power supply', '16.8 V lithium battery + charger']],
   },
   {
-    slug: 'p500-handheld-inkjet-printer', model: 'P500/P500S', name: 'P500 Two-Head Handheld Thermal Inkjet Printer', type: 'Two-head handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 207, badge: 'Two heads',
+    slug: 'p500-handheld-inkjet-printer', model: 'P500/P500S', name: 'P500 Two-Head Handheld Thermal Inkjet Printer', type: 'Two-head handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 227, badge: 'Two heads',
     hero: '/assets/products/p500-handheld-inkjet-printer/hero.png',
     gallery: ['/assets/products/p500-handheld-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/p500-handheld-inkjet-printer/hero.png'],
@@ -185,7 +185,7 @@ export const products: Product[] = [
     specs: [['Print height', '25.4 mm (two 12.7 mm heads)'], ['Print resolution', '300–600 dpi'], ['Print speed', '≤30 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Text, date/time, batch, serial number, logo, barcode, QR code'], ['Ink cartridge', '2 × 42 ml TIJ cartridges; water-based / solvent quick-dry / oil-based'], ['Power supply', '16.8 V lithium battery + charger']],
   },
   {
-    slug: 'a5c-handheld-inkjet-printer', model: 'A5C/A5CS', name: 'A5C Side-Held Thermal Inkjet Printer', type: 'Side-held thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 146, badge: 'Side grip',
+    slug: 'a5c-handheld-inkjet-printer', model: 'A5C/A5CS', name: 'A5C Side-Held Thermal Inkjet Printer', type: 'Side-held thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 166, badge: 'Side grip',
     hero: '/assets/products/a5c-handheld-inkjet-printer/hero.png',
     gallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png'],
@@ -195,7 +195,7 @@ export const products: Product[] = [
     specs: [['Print height', 'A5C: 12.7 mm; A5CS: 25.4 mm'], ['Print resolution', '300–600 dpi'], ['Print speed', '≤30 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Text, date/time, batch, serial number, logo, barcode, QR code'], ['Ink cartridge', '42 ml TIJ cartridge; water-based / solvent quick-dry / oil-based'], ['Screen', '3.4-inch touchscreen'], ['Grip', 'Side-held'], ['Power supply', '16.8 V lithium battery + charger']],
   },
   {
-    slug: 't5-online-inkjet-printer', model: 'T5/T5S', name: 'T5 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 145, badge: 'For production lines',
+    slug: 't5-online-inkjet-printer', model: 'T5/T5S', name: 'T5 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 165, badge: 'For production lines',
     hero: '/assets/products/t5-online-inkjet-printer/hero.png',
     gallery: ['/assets/products/t5-online-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/t5-online-inkjet-printer/hero.png'],
@@ -205,7 +205,7 @@ export const products: Product[] = [
     specs: [['Print height', 'T5: 12.7 mm; T5S: 25.4 mm'], ['Print resolution', '300 dpi'], ['Print speed', '30 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Text, date/time, batch, counter, image, barcode, QR code'], ['Ink cartridge', '42 ml solvent quick-dry TIJ cartridge; black, red, green, blue, white, yellow'], ['Screen', '4.3-inch touchscreen'], ['Cover', 'Aluminum cover'], ['Trigger', 'Photoelectric sensor (included) + stand set'], ['Power supply', 'AC 100–240 V adapter']],
   },
   {
-    slug: 't6-online-inkjet-printer', model: 'T6/T6S', name: 'T6 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 155, badge: 'For production lines',
+    slug: 't6-online-inkjet-printer', model: 'T6/T6S', name: 'T6 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 175, badge: 'For production lines',
     hero: '/assets/products/t6-online-inkjet-printer/hero.png',
     gallery: ['/assets/products/t6-online-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/t6-online-inkjet-printer/hero.png'],
@@ -215,7 +215,7 @@ export const products: Product[] = [
     specs: [['Print height', 'T6: 12.7 mm; T6S: 25.4 mm'], ['Print resolution', '300 dpi'], ['Print speed', '30 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Custom text (Chinese, English, numbers, symbols), variable date, counter, image, barcode, QR code'], ['Fonts', 'Arial, dot-matrix, bold, Song typeface'], ['Languages', 'Chinese, English, Italian, Vietnamese, Japanese, Russian, Portuguese, French, Turkish, etc.'], ['Ink cartridge', '42 ml solvent quick-dry TIJ cartridge; black, red, green, blue, white, yellow'], ['Screen', '4.3-inch touchscreen'], ['Cover', 'Metal cover'], ['Included', 'Printer + photoelectric sensor + stand set'], ['Operating environment', '-20°C to 40°C'], ['Power supply', 'AC 100–240 V adapter']],
   },
   {
-    slug: 't9-online-inkjet-printer', model: 'T9/T9S', name: 'T9 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 168, badge: 'For production lines',
+    slug: 't9-online-inkjet-printer', model: 'T9/T9S', name: 'T9 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 188, badge: 'For production lines',
     hero: '/assets/products/t9-online-inkjet-printer/hero.png',
     gallery: ['/assets/products/t9-online-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/t9-online-inkjet-printer/hero.png'],
@@ -225,7 +225,7 @@ export const products: Product[] = [
     specs: [['Print height', 'T9: 12.7 mm; T9S: 25.4 mm'], ['Print resolution', '300 dpi'], ['Print speed', '30 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Text, date/time, batch, counter, image, barcode, QR code'], ['Ink cartridge', '42 ml solvent quick-dry TIJ cartridge; black, red, green, blue, white, yellow'], ['Screen', '5-inch touchscreen'], ['Cover', 'Metal cover'], ['Trigger', 'Photoelectric sensor (included) + stand set'], ['Power supply', 'AC 100–240 V adapter']],
   },
   {
-    slug: 't10-1-online-inkjet-printer', model: 'T10-1/T10S-1', name: 'T10-1 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 180, badge: 'Fine adjustment',
+    slug: 't10-1-online-inkjet-printer', model: 'T10-1/T10S-1', name: 'T10-1 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 200, badge: 'Fine adjustment',
     hero: '/assets/products/t10-1-online-inkjet-printer/hero.png',
     gallery: ['/assets/products/t10-1-online-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/t10-1-online-inkjet-printer/hero.png'],
@@ -235,7 +235,7 @@ export const products: Product[] = [
     specs: [['Print height', 'T10-1: 12.7 mm; T10S-1: 25.4 mm'], ['Print resolution', '300 dpi'], ['Print speed', '30 m/min'], ['Print distance', '2–5 mm, fine adjustment'], ['Print content', 'Text, date/time, batch, counter, image, barcode, QR code'], ['Ink cartridge', '42 ml solvent quick-dry TIJ cartridge; black, red, green, blue, white, yellow'], ['Screen', '7-inch touchscreen'], ['Cover', 'Aluminum cover'], ['Trigger', 'Photoelectric sensor (included) + stand set'], ['Power supply', 'AC 100–240 V adapter']],
   },
   {
-    slug: 't10-2-online-inkjet-printer', model: 'T10-2/T10S-2', name: 'T10-2 Two-Head Online Thermal Inkjet Printer', type: 'Two-head online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 295, badge: 'Two heads',
+    slug: 't10-2-online-inkjet-printer', model: 'T10-2/T10S-2', name: 'T10-2 Two-Head Online Thermal Inkjet Printer', type: 'Two-head online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 315, badge: 'Two heads',
     hero: '/assets/products/t10-2-online-inkjet-printer/hero.png',
     gallery: ['/assets/products/t10-2-online-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/t10-2-online-inkjet-printer/hero.png'],
@@ -245,7 +245,7 @@ export const products: Product[] = [
     specs: [['Print height', '25.4 mm (two 12.7 mm heads)'], ['Print resolution', '300 dpi'], ['Print speed', '30 m/min'], ['Print distance', '2–5 mm, fine adjustment'], ['Print content', 'Text, date/time, batch, counter, image, barcode, QR code'], ['Ink cartridge', '2 × 42 ml solvent quick-dry TIJ cartridges; black, red, green, blue, white, yellow'], ['Screen', '7-inch touchscreen'], ['Cover', 'Aluminum cover'], ['Trigger', 'Photoelectric sensor (included) + stand set'], ['Power supply', 'AC 100–240 V adapter']],
   },
   {
-    slug: 'm70-mini-inkjet-printer', model: 'M70', name: 'M70 Mini Handheld Thermal Inkjet Printer', type: 'Mini handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 105, badge: 'Mini',
+    slug: 'm70-mini-inkjet-printer', model: 'M70', name: 'M70 Mini Handheld Thermal Inkjet Printer', type: 'Mini handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 125, badge: 'Mini',
     hero: '/assets/products/m70-mini-inkjet-printer/hero.png',
     gallery: ['/assets/products/m70-mini-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/m70-mini-inkjet-printer/hero.png'],
@@ -255,7 +255,7 @@ export const products: Product[] = [
     specs: [['Print height', '2–12.7 mm'], ['Print resolution', '600 dpi'], ['Print speed', '40 m/min'], ['Print distance', '2–5 mm'], ['Print content', 'Date, time, batch, shift, serial number, barcode, QR code'], ['Message length', '4000 characters per message, no length limit'], ['Ink cartridge', '42 ml TIJ cartridge; quick-dry / water-based / oil-based; black, blue, red, yellow, white'], ['Screen', '2.8-inch touchscreen'], ['Battery', 'DC lithium battery, >8 hours continuous printing'], ['Interfaces', 'USB, photoelectric interface'], ['Power consumption', '<2.3 W average'], ['Dimensions', '110 × 48 × 74 mm'], ['Net weight', '0.19 kg'], ['Working environment', '0–42°C, 15–70% humidity']],
   },
   {
-    slug: 'k90-desktop-inkjet-printer', model: 'K90/K90S', name: 'K90 Desktop Thermal Inkjet Printer', type: 'Desktop thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 175, badge: 'Desktop',
+    slug: 'k90-desktop-inkjet-printer', model: 'K90/K90S', name: 'K90 Desktop Thermal Inkjet Printer', type: 'Desktop thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 195, badge: 'Desktop',
     hero: '/assets/products/k90-desktop-inkjet-printer/hero.png',
     gallery: ['/assets/products/k90-desktop-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/k90-desktop-inkjet-printer/hero.png'],
@@ -265,7 +265,7 @@ export const products: Product[] = [
     specs: [['Print height', '25.4 mm'], ['Print length', '100 mm'], ['Print resolution', '150–300 dpi'], ['Print distance', '1–5 mm'], ['Print content', 'Text, counter, date/time, barcode, QR code, picture, variable data'], ['Counter', '1–9 digits'], ['File storage', '250 files'], ['Trigger', 'Button / foot switch / sensor'], ['Motor', 'Stepping motor'], ['Ink cartridge', '42 ml TIJ cartridge; solvent quick-dry'], ['Screen', '7-inch HD capacitive touchscreen'], ['Cover', 'Metal cover'], ['Languages', 'Chinese / English'], ['Interfaces', 'USB, pedal, sensor, RS232'], ['Dimensions', '220 × 180 × 200 mm'], ['Power supply', 'AC 100–240 V, 50/60 Hz']],
   },
   {
-    slug: 'k80-conveyor-inkjet-printer', model: 'K80/K80S', name: 'K80 Conveyor Thermal Inkjet Printer', type: 'Conveyor thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 215, badge: 'With conveyor',
+    slug: 'k80-conveyor-inkjet-printer', model: 'K80/K80S', name: 'K80 Conveyor Thermal Inkjet Printer', type: 'Conveyor thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 235, badge: 'With conveyor',
     hero: '/assets/products/k80-conveyor-inkjet-printer/hero.png',
     gallery: ['/assets/products/k80-conveyor-inkjet-printer/hero.png'],
     detailGallery: ['/assets/products/k80-conveyor-inkjet-printer/hero.png'],
