@@ -374,8 +374,8 @@ export const products: Product[] = [
   {
     slug: 't10-plus-online-inkjet-printer', model: 'T10-Plus/T10S-Plus', name: 'T10-Plus Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 195, badge: 'Metal cover · 7-inch',
     hero: '/assets/products/t10-plus-online-inkjet-printer/hero.png',
-    gallery: ['/assets/products/t10-plus-online-inkjet-printer/hero.png', '/assets/products/t10-plus-online-inkjet-printer/detail-1.png'],
-    detailGallery: ['/assets/products/t10-plus-online-inkjet-printer/hero.png', '/assets/products/t10-plus-online-inkjet-printer/detail-1.png'],
+    gallery: ['/assets/products/t10-plus-online-inkjet-printer/hero.png', '/assets/products/print-samples/tij-cartridge-42ml.png', '/assets/products/print-samples/tij-carton-print.png'],
+    detailGallery: ['/assets/products/t10-plus-online-inkjet-printer/hero.png', '/assets/products/print-samples/tij-cartridge-42ml.png', '/assets/products/print-samples/tij-carton-print.png'],
     description: 'An online thermal inkjet printer with a metal cover and a large 7-inch touchscreen for production lines — date, batch, barcode and QR coding triggered by photoelectric sensor as products pass.',
     longDescription: 'The T10-Plus is an online thermal inkjet (TIJ) printer with a metal cover and a large 7-inch touchscreen for production lines. Compared with the T10-1, which has an aluminum cover, the T10-Plus uses a heavier metal cover. A photoelectric sensor triggers date, batch, barcode and QR coding as products pass under the print head. Price excludes ink cartridge.',
     applications: 'Production lines · Cartons · Bottles · Pipes · Cables · Packaging lines',
@@ -385,8 +385,8 @@ export const products: Product[] = [
   {
     slug: 't10-plus-2-online-inkjet-printer', model: 'T10 Plus-2/T10S Plus-2', name: 'T10 Plus-2 Two-Head Online Thermal Inkjet Printer', type: 'Two-head online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 320, badge: 'Two heads · Metal cover',
     hero: '/assets/products/t10-plus-2-online-inkjet-printer/hero.png',
-    gallery: ['/assets/products/t10-plus-2-online-inkjet-printer/hero.png', '/assets/products/t10-plus-2-online-inkjet-printer/detail-1.png'],
-    detailGallery: ['/assets/products/t10-plus-2-online-inkjet-printer/hero.png', '/assets/products/t10-plus-2-online-inkjet-printer/detail-1.png'],
+    gallery: ['/assets/products/t10-plus-2-online-inkjet-printer/hero.png', '/assets/products/t10-plus-2-online-inkjet-printer/detail-1.png', '/assets/products/print-samples/tij-cartridge-42ml.png', '/assets/products/print-samples/tij-carton-print.png'],
+    detailGallery: ['/assets/products/t10-plus-2-online-inkjet-printer/hero.png', '/assets/products/t10-plus-2-online-inkjet-printer/detail-1.png', '/assets/products/print-samples/tij-cartridge-42ml.png', '/assets/products/print-samples/tij-carton-print.png'],
     description: 'A two-head online thermal inkjet printer with a metal cover and a 7-inch touchscreen — up to 25.4 mm print height in one pass on production lines.',
     longDescription: 'The T10 Plus-2 is a two-head online thermal inkjet (TIJ) printer with a metal cover and a 7-inch touchscreen. Two print heads cover up to 25.4 mm print height in one pass on production lines. Compared with the T10-2, which has an aluminum cover, the T10 Plus-2 uses a heavier metal cover. Price excludes ink cartridges.',
     applications: 'Production lines · Cartons · Large packaging · Bottles · Pipes',
@@ -396,8 +396,8 @@ export const products: Product[] = [
   {
     slug: 'f-11-feeding-inkjet-printer', model: 'F-11/F-11S', name: 'F-11 Feeding Inkjet Printer', type: 'Feeding thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 550, badge: 'With feeder',
     hero: '/assets/products/f-11-feeding-inkjet-printer/hero.png',
-    gallery: ['/assets/products/f-11-feeding-inkjet-printer/hero.png', '/assets/products/f-11-feeding-inkjet-printer/detail-1.png'],
-    detailGallery: ['/assets/products/f-11-feeding-inkjet-printer/hero.png', '/assets/products/f-11-feeding-inkjet-printer/detail-1.png'],
+    gallery: ['/assets/products/f-11-feeding-inkjet-printer/hero.png', '/assets/products/f-11-feeding-inkjet-printer/detail-1.png', '/assets/products/print-samples/tij-cartridge-42ml.png', '/assets/products/print-samples/tij-carton-print.png'],
+    detailGallery: ['/assets/products/f-11-feeding-inkjet-printer/hero.png', '/assets/products/f-11-feeding-inkjet-printer/detail-1.png', '/assets/products/print-samples/tij-cartridge-42ml.png', '/assets/products/print-samples/tij-carton-print.png'],
     description: 'A feeding inkjet printer — an integrated feeder moves flat products under the print head for automatic date, batch, barcode and QR coding on small production lines.',
     longDescription: 'The F-11 is a feeding thermal inkjet (TIJ) printer with an integrated feeder and a 4.3-inch touchscreen. The feeder moves flat products under the print head for automatic date, batch, barcode and QR coding, without a separate conveyor. Price excludes ink cartridge.',
     applications: 'Small production lines · Cartons · Labels · Bags · Flat products',
