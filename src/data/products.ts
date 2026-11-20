@@ -147,7 +147,7 @@ export const products: Product[] = [
   {
     slug: 'a3-handheld-inkjet-printer', model: 'A3/A3S', name: 'A3 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 138, badge: 'Entry point',
     hero: '/assets/products/a3-handheld-inkjet-printer/hero.png',
-    gallery: ['/assets/products/a3-handheld-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/a3-handheld-inkjet-printer/hero.png', '/assets/products/a3-handheld-inkjet-printer/detail-1.png', '/assets/products/a3-handheld-inkjet-printer/detail-2.png', '/assets/products/a3-handheld-inkjet-printer/detail-3.png', '/assets/products/a3-handheld-inkjet-printer/detail-4.png', '/assets/products/a3-handheld-inkjet-printer/detail-5.png'],
     detailGallery: ['/assets/products/a3-handheld-inkjet-printer/hero.png', '/assets/products/a3-handheld-inkjet-printer/detail-1.png', '/assets/products/a3-handheld-inkjet-printer/detail-2.png', '/assets/products/a3-handheld-inkjet-printer/detail-3.png', '/assets/products/a3-handheld-inkjet-printer/detail-4.png', '/assets/products/a3-handheld-inkjet-printer/detail-5.png'],
     description: 'A lightweight handheld thermal inkjet printer with a 4.3-inch touchscreen for date, batch and expiry coding on cartons, plastic, metal, glass, wood and film.',
     longDescription: 'The A3 is a lightweight handheld thermal inkjet (TIJ) printer with a 4.3-inch touchscreen. It prints dates, batch numbers and expiry codes on cartons, plastic, metal, glass, wood and film, using quick-dry TIJ cartridges. Price excludes ink cartridge.',
@@ -157,7 +157,7 @@ export const products: Product[] = [
   {
     slug: 'a5-handheld-inkjet-printer', model: 'A5/A5S', name: 'A5 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 155, badge: 'Metal shell',
     hero: '/assets/products/a5-handheld-inkjet-printer/hero.png',
-    gallery: ['/assets/products/a5-handheld-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/a5-handheld-inkjet-printer/hero.png', '/assets/products/a5-handheld-inkjet-printer/detail-1.png', '/assets/products/a5-handheld-inkjet-printer/detail-2.png', '/assets/products/a5-handheld-inkjet-printer/detail-3.png', '/assets/products/a5-handheld-inkjet-printer/detail-4.png', '/assets/products/a5-handheld-inkjet-printer/detail-5.png'],
     detailGallery: ['/assets/products/a5-handheld-inkjet-printer/hero.png', '/assets/products/a5-handheld-inkjet-printer/detail-1.png', '/assets/products/a5-handheld-inkjet-printer/detail-2.png', '/assets/products/a5-handheld-inkjet-printer/detail-3.png', '/assets/products/a5-handheld-inkjet-printer/detail-4.png', '/assets/products/a5-handheld-inkjet-printer/detail-5.png'],
     description: 'A metal-shell handheld thermal inkjet printer with a 4.3-inch touchscreen, external synchronizer or V-wheel option, for date, batch, barcode and QR coding on almost any surface.',
     longDescription: 'The A5 is a metal-shell handheld thermal inkjet (TIJ) printer with a 4.3-inch resistive touchscreen and embedded operating system. It prints dates, batch numbers, barcodes and QR codes on cartons, plastic, metal, glass, wood, pipes and cables, and can switch between handheld and pipeline use. Price excludes ink cartridge.',
@@ -167,7 +167,7 @@ export const products: Product[] = [
   {
     slug: 'a9-handheld-inkjet-printer', model: 'A9/A9S', name: 'A9 Handheld Thermal Inkjet Printer', type: 'Handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 200, badge: '5-inch screen',
     hero: '/assets/products/a9-handheld-inkjet-printer/hero.png',
-    gallery: ['/assets/products/a9-handheld-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/a9-handheld-inkjet-printer/hero.png', '/assets/products/a9-handheld-inkjet-printer/detail-1.png', '/assets/products/a9-handheld-inkjet-printer/detail-2.png', '/assets/products/a9-handheld-inkjet-printer/detail-3.png'],
     detailGallery: ['/assets/products/a9-handheld-inkjet-printer/hero.png', '/assets/products/a9-handheld-inkjet-printer/detail-1.png', '/assets/products/a9-handheld-inkjet-printer/detail-2.png', '/assets/products/a9-handheld-inkjet-printer/detail-3.png'],
     description: 'A handheld thermal inkjet printer with a large 5-inch touchscreen and ABS shell for date, batch, barcode and QR coding on cartons, packaging and industrial parts.',
     longDescription: 'The A9 is a handheld thermal inkjet (TIJ) printer with a large 5-inch touchscreen and ABS shell. It prints dates, batch numbers, barcodes and QR codes on cartons, packaging and industrial parts, using quick-dry TIJ cartridges. Price excludes ink cartridge.',
@@ -177,7 +177,7 @@ export const products: Product[] = [
   {
     slug: 'p500-handheld-inkjet-printer', model: 'P500/P500S', name: 'P500 Two-Head Handheld Thermal Inkjet Printer', type: 'Two-head handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 227, badge: 'Two heads',
     hero: '/assets/products/p500-handheld-inkjet-printer/hero.png',
-    gallery: ['/assets/products/p500-handheld-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/p500-handheld-inkjet-printer/hero.png', '/assets/products/p500-handheld-inkjet-printer/detail-1.png', '/assets/products/p500-handheld-inkjet-printer/detail-3.png', '/assets/products/p500-handheld-inkjet-printer/detail-4.png'],
     detailGallery: ['/assets/products/p500-handheld-inkjet-printer/hero.png', '/assets/products/p500-handheld-inkjet-printer/detail-1.png', '/assets/products/p500-handheld-inkjet-printer/detail-3.png', '/assets/products/p500-handheld-inkjet-printer/detail-4.png'],
     description: 'A two-head handheld thermal inkjet printer that prints up to 25.4 mm high in one pass — large dates, batch codes, logos and barcodes on cartons and large packaging.',
     longDescription: 'The P500 is a two-head handheld thermal inkjet (TIJ) printer that prints up to 25.4 mm high in a single pass, for large dates, batch codes, logos and barcodes on cartons and large packaging. Price excludes ink cartridges.',
@@ -187,7 +187,7 @@ export const products: Product[] = [
   {
     slug: 'a5c-handheld-inkjet-printer', model: 'A5C/A5CS', name: 'A5C Side-Held Thermal Inkjet Printer', type: 'Side-held thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 166, badge: 'Side grip',
     hero: '/assets/products/a5c-handheld-inkjet-printer/hero.png',
-    gallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png', '/assets/products/a5c-handheld-inkjet-printer/detail-1.png', '/assets/products/a5c-handheld-inkjet-printer/detail-2.png', '/assets/products/a5c-handheld-inkjet-printer/detail-3.png'],
     detailGallery: ['/assets/products/a5c-handheld-inkjet-printer/hero.png', '/assets/products/a5c-handheld-inkjet-printer/detail-1.png', '/assets/products/a5c-handheld-inkjet-printer/detail-2.png', '/assets/products/a5c-handheld-inkjet-printer/detail-3.png'],
     description: 'A side-held thermal inkjet printer with a 3.4-inch screen for coding on the side of cartons, bottles and parts that are awkward to mark from above.',
     longDescription: 'The A5C is a side-held thermal inkjet (TIJ) printer with a 3.4-inch screen, designed for coding on the side of cartons, bottles and parts that are awkward to mark from above. Price excludes ink cartridge.',
@@ -197,7 +197,7 @@ export const products: Product[] = [
   {
     slug: 't5-online-inkjet-printer', model: 'T5/T5S', name: 'T5 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 165, badge: 'For production lines',
     hero: '/assets/products/t5-online-inkjet-printer/hero.png',
-    gallery: ['/assets/products/t5-online-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/t5-online-inkjet-printer/hero.png', '/assets/products/t5-online-inkjet-printer/detail-1.png', '/assets/products/t5-online-inkjet-printer/detail-2.png', '/assets/products/t5-online-inkjet-printer/detail-3.png', '/assets/products/t5-online-inkjet-printer/detail-4.png', '/assets/products/t5-online-inkjet-printer/detail-5.png'],
     detailGallery: ['/assets/products/t5-online-inkjet-printer/hero.png', '/assets/products/t5-online-inkjet-printer/detail-1.png', '/assets/products/t5-online-inkjet-printer/detail-2.png', '/assets/products/t5-online-inkjet-printer/detail-3.png', '/assets/products/t5-online-inkjet-printer/detail-4.png', '/assets/products/t5-online-inkjet-printer/detail-5.png'],
     description: 'An online thermal inkjet printer with an aluminum cover for production lines — date, batch, barcode and QR coding triggered by photoelectric sensor as products pass.',
     longDescription: 'The T5 is an online thermal inkjet (TIJ) printer with an aluminum cover for production lines. A photoelectric sensor triggers date, batch, barcode and QR coding as products pass under the print head. Price excludes ink cartridge.',
@@ -207,7 +207,7 @@ export const products: Product[] = [
   {
     slug: 't6-online-inkjet-printer', model: 'T6/T6S', name: 'T6 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 175, badge: 'For production lines',
     hero: '/assets/products/t6-online-inkjet-printer/hero.png',
-    gallery: ['/assets/products/t6-online-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/t6-online-inkjet-printer/hero.png', '/assets/products/t6-online-inkjet-printer/detail-1.png', '/assets/products/t6-online-inkjet-printer/detail-2.png', '/assets/products/t6-online-inkjet-printer/detail-3.png', '/assets/products/t6-online-inkjet-printer/detail-4.png', '/assets/products/t6-online-inkjet-printer/detail-5.png'],
     detailGallery: ['/assets/products/t6-online-inkjet-printer/hero.png', '/assets/products/t6-online-inkjet-printer/detail-1.png', '/assets/products/t6-online-inkjet-printer/detail-2.png', '/assets/products/t6-online-inkjet-printer/detail-3.png', '/assets/products/t6-online-inkjet-printer/detail-4.png', '/assets/products/t6-online-inkjet-printer/detail-5.png'],
     description: 'An online thermal inkjet printer with a metal cover for production lines — date, batch, barcode and QR coding triggered by photoelectric sensor as products pass.',
     longDescription: 'The T6 is an online thermal inkjet (TIJ) printer with a metal cover for production lines. A photoelectric sensor triggers date, batch, barcode and QR coding as products pass under the print head. Price excludes ink cartridge.',
@@ -217,7 +217,7 @@ export const products: Product[] = [
   {
     slug: 't9-online-inkjet-printer', model: 'T9/T9S', name: 'T9 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 188, badge: 'For production lines',
     hero: '/assets/products/t9-online-inkjet-printer/hero.png',
-    gallery: ['/assets/products/t9-online-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/t9-online-inkjet-printer/hero.png', '/assets/products/t9-online-inkjet-printer/detail-1.png', '/assets/products/t9-online-inkjet-printer/detail-2.png', '/assets/products/t9-online-inkjet-printer/detail-3.png'],
     detailGallery: ['/assets/products/t9-online-inkjet-printer/hero.png', '/assets/products/t9-online-inkjet-printer/detail-1.png', '/assets/products/t9-online-inkjet-printer/detail-2.png', '/assets/products/t9-online-inkjet-printer/detail-3.png'],
     description: 'An online thermal inkjet printer with a metal cover and large 5-inch touchscreen for production lines — date, batch, barcode and QR coding on cartons, bottles and packaging.',
     longDescription: 'The T9 is an online thermal inkjet (TIJ) printer with a metal cover and a large 5-inch touchscreen for production lines. A photoelectric sensor triggers date, batch, barcode and QR coding as products pass under the print head. Price excludes ink cartridge.',
@@ -227,7 +227,7 @@ export const products: Product[] = [
   {
     slug: 't10-1-online-inkjet-printer', model: 'T10-1/T10S-1', name: 'T10-1 Online Thermal Inkjet Printer', type: 'Online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 200, badge: 'Fine adjustment',
     hero: '/assets/products/t10-1-online-inkjet-printer/hero.png',
-    gallery: ['/assets/products/t10-1-online-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/t10-1-online-inkjet-printer/hero.png', '/assets/products/t10-1-online-inkjet-printer/detail-1.png', '/assets/products/t10-1-online-inkjet-printer/detail-2.png', '/assets/products/t10-1-online-inkjet-printer/detail-3.png', '/assets/products/t10-1-online-inkjet-printer/detail-4.png', '/assets/products/t10-1-online-inkjet-printer/detail-5.png'],
     detailGallery: ['/assets/products/t10-1-online-inkjet-printer/hero.png', '/assets/products/t10-1-online-inkjet-printer/detail-1.png', '/assets/products/t10-1-online-inkjet-printer/detail-2.png', '/assets/products/t10-1-online-inkjet-printer/detail-3.png', '/assets/products/t10-1-online-inkjet-printer/detail-4.png', '/assets/products/t10-1-online-inkjet-printer/detail-5.png'],
     description: 'An online thermal inkjet printer with an aluminum cover, fine print-position adjustment and a large 7-inch touchscreen for production lines.',
     longDescription: 'The T10-1 is an online thermal inkjet (TIJ) printer with an aluminum cover, fine print-position adjustment and a large 7-inch touchscreen for production lines. A photoelectric sensor triggers date, batch, barcode and QR coding as products pass. Price excludes ink cartridge.',
@@ -237,7 +237,7 @@ export const products: Product[] = [
   {
     slug: 't10-2-online-inkjet-printer', model: 'T10-2/T10S-2', name: 'T10-2 Two-Head Online Thermal Inkjet Printer', type: 'Two-head online thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 315, badge: 'Two heads',
     hero: '/assets/products/t10-2-online-inkjet-printer/hero.png',
-    gallery: ['/assets/products/t10-2-online-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/t10-2-online-inkjet-printer/hero.png', '/assets/products/t10-2-online-inkjet-printer/detail-1.png', '/assets/products/t10-2-online-inkjet-printer/detail-2.png', '/assets/products/t10-2-online-inkjet-printer/detail-3.png', '/assets/products/t10-2-online-inkjet-printer/detail-4.png', '/assets/products/t10-2-online-inkjet-printer/detail-5.png'],
     detailGallery: ['/assets/products/t10-2-online-inkjet-printer/hero.png', '/assets/products/t10-2-online-inkjet-printer/detail-1.png', '/assets/products/t10-2-online-inkjet-printer/detail-2.png', '/assets/products/t10-2-online-inkjet-printer/detail-3.png', '/assets/products/t10-2-online-inkjet-printer/detail-4.png', '/assets/products/t10-2-online-inkjet-printer/detail-5.png'],
     description: 'A two-head online thermal inkjet printer with an aluminum cover, fine print-position adjustment and a 7-inch touchscreen — up to 25.4 mm print height in one pass on production lines.',
     longDescription: 'The T10-2 is a two-head online thermal inkjet (TIJ) printer with an aluminum cover, fine print-position adjustment and a 7-inch touchscreen. Two print heads cover up to 25.4 mm print height in one pass on production lines. Price excludes ink cartridges.',
@@ -247,7 +247,7 @@ export const products: Product[] = [
   {
     slug: 'm70-mini-inkjet-printer', model: 'M70', name: 'M70 Mini Handheld Thermal Inkjet Printer', type: 'Mini handheld thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 125, badge: 'Mini',
     hero: '/assets/products/m70-mini-inkjet-printer/hero.png',
-    gallery: ['/assets/products/m70-mini-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/m70-mini-inkjet-printer/hero.png', '/assets/products/m70-mini-inkjet-printer/detail-1.png', '/assets/products/m70-mini-inkjet-printer/detail-2.png', '/assets/products/m70-mini-inkjet-printer/detail-3.png'],
     detailGallery: ['/assets/products/m70-mini-inkjet-printer/hero.png', '/assets/products/m70-mini-inkjet-printer/detail-1.png', '/assets/products/m70-mini-inkjet-printer/detail-2.png', '/assets/products/m70-mini-inkjet-printer/detail-3.png'],
     description: 'A pocket-size mini handheld thermal inkjet printer with a 2.8-inch touchscreen for quick date, batch and QR coding on small products, bottles and cartons.',
     longDescription: 'The M70 is a pocket-size mini handheld thermal inkjet (TIJ) printer with a 2.8-inch touchscreen for quick date, batch and QR coding on small products, bottles and cartons. Price excludes ink cartridge.',
@@ -257,7 +257,7 @@ export const products: Product[] = [
   {
     slug: 'k90-desktop-inkjet-printer', model: 'K90/K90S', name: 'K90 Desktop Thermal Inkjet Printer', type: 'Desktop thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-standalone', price: 195, badge: 'Desktop',
     hero: '/assets/products/k90-desktop-inkjet-printer/hero.png',
-    gallery: ['/assets/products/k90-desktop-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/k90-desktop-inkjet-printer/hero.png', '/assets/products/k90-desktop-inkjet-printer/detail-1.png', '/assets/products/k90-desktop-inkjet-printer/detail-2.png', '/assets/products/k90-desktop-inkjet-printer/detail-3.png', '/assets/products/k90-desktop-inkjet-printer/detail-4.png', '/assets/products/k90-desktop-inkjet-printer/detail-5.png'],
     detailGallery: ['/assets/products/k90-desktop-inkjet-printer/hero.png', '/assets/products/k90-desktop-inkjet-printer/detail-1.png', '/assets/products/k90-desktop-inkjet-printer/detail-2.png', '/assets/products/k90-desktop-inkjet-printer/detail-3.png', '/assets/products/k90-desktop-inkjet-printer/detail-4.png', '/assets/products/k90-desktop-inkjet-printer/detail-5.png'],
     description: 'A desktop thermal inkjet printer with a metal cover and 7-inch touchscreen for bench-top date, batch, barcode and QR coding, triggered by button, foot switch or sensor.',
     longDescription: 'The K90 is a desktop thermal inkjet (TIJ) printer with a metal cover and a 7-inch HD capacitive touchscreen for bench-top date, batch, barcode and QR coding, triggered by button, foot switch or sensor. Price excludes ink cartridge.',
@@ -267,7 +267,7 @@ export const products: Product[] = [
   {
     slug: 'k80-conveyor-inkjet-printer', model: 'K80/K80S', name: 'K80 Conveyor Thermal Inkjet Printer', type: 'Conveyor thermal inkjet printer', category: 'inkjet-printers', parentCategory: 'inkjet-printers', subcategory: 'inkjet', useCategory: 'inkjet-packaging-line', price: 235, badge: 'With conveyor',
     hero: '/assets/products/k80-conveyor-inkjet-printer/hero.png',
-    gallery: ['/assets/products/k80-conveyor-inkjet-printer/hero.png'],
+    gallery: ['/assets/products/k80-conveyor-inkjet-printer/hero.png', '/assets/products/k80-conveyor-inkjet-printer/detail-1.png', '/assets/products/k80-conveyor-inkjet-printer/detail-2.png', '/assets/products/k80-conveyor-inkjet-printer/detail-3.png', '/assets/products/k80-conveyor-inkjet-printer/detail-4.png', '/assets/products/k80-conveyor-inkjet-printer/detail-5.png'],
     detailGallery: ['/assets/products/k80-conveyor-inkjet-printer/hero.png', '/assets/products/k80-conveyor-inkjet-printer/detail-1.png', '/assets/products/k80-conveyor-inkjet-printer/detail-2.png', '/assets/products/k80-conveyor-inkjet-printer/detail-3.png', '/assets/products/k80-conveyor-inkjet-printer/detail-4.png', '/assets/products/k80-conveyor-inkjet-printer/detail-5.png'],
     description: 'A thermal inkjet printer mounted over a conveyor with fine print-position adjustment — products move under the print head for automatic date, batch, barcode and QR coding.',
     longDescription: 'The K80 is a thermal inkjet (TIJ) printer mounted over a conveyor with fine print-position adjustment. Products move under the print head for automatic date, batch, barcode and QR coding. Price excludes ink cartridge.',
