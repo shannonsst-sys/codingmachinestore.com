@@ -1,6 +1,6 @@
 # Coding Machine Store
 
-Static storefront for `codingmachinestore.com`, built around twenty-two ready-to-list coding machines from Zhejiang Feihuang, Ruian:
+Static storefront for `codingmachinestore.com`, built around twenty-eight ready-to-list coding machines from Zhejiang Feihuang, Ruian:
 
 - DY-8B Manual Hot Ribbon Coding Machine — `$47.28 / unit`
 - HP-241B Electric Hot Ribbon Coding Machine — `$113.05 / unit`
@@ -11,21 +11,27 @@ Static storefront for `codingmachinestore.com`, built around twenty-two ready-to
 - HP-280 Hot Ink Roll Coding Machine — `$232.90 / unit`
 - LS-1100 Ink Wheel Coding Machine — `$194.05 / unit`
 - MY-380F Automatic Solid Ink Roll Coding Machine — `$267.32 / unit`
-- A3 Handheld Thermal Inkjet Printer — `$118.00 / unit`
-- A5 Handheld Thermal Inkjet Printer — `$135.00 / unit`
-- A9 Handheld Thermal Inkjet Printer — `$180.00 / unit`
-- P500 Two-Head Handheld Thermal Inkjet Printer — `$207.00 / unit`
-- A5C Side-Held Thermal Inkjet Printer — `$146.00 / unit`
-- T5 Online Thermal Inkjet Printer — `$145.00 / unit`
-- T6 Online Thermal Inkjet Printer — `$155.00 / unit`
-- T9 Online Thermal Inkjet Printer — `$168.00 / unit`
-- T10-1 Online Thermal Inkjet Printer — `$180.00 / unit`
-- T10-2 Two-Head Online Thermal Inkjet Printer — `$295.00 / unit`
-- M70 Mini Handheld Thermal Inkjet Printer — `$105.00 / unit`
-- K90 Desktop Thermal Inkjet Printer — `$175.00 / unit`
-- K80 Conveyor Thermal Inkjet Printer — `$215.00 / unit`
+- A3 Handheld Thermal Inkjet Printer — `$138.00 / unit`
+- A5 Handheld Thermal Inkjet Printer — `$155.00 / unit`
+- A9 Handheld Thermal Inkjet Printer — `$200.00 / unit`
+- P500 Two-Head Handheld Thermal Inkjet Printer — `$227.00 / unit`
+- A5C Side-Held Thermal Inkjet Printer — `$166.00 / unit`
+- T5 Online Thermal Inkjet Printer — `$165.00 / unit`
+- T6 Online Thermal Inkjet Printer — `$175.00 / unit`
+- T9 Online Thermal Inkjet Printer — `$188.00 / unit`
+- T10-1 Online Thermal Inkjet Printer — `$200.00 / unit`
+- T10-2 Two-Head Online Thermal Inkjet Printer — `$315.00 / unit`
+- M70 Mini Handheld Thermal Inkjet Printer — `$125.00 / unit`
+- K90 Desktop Thermal Inkjet Printer — `$195.00 / unit`
+- K80 Conveyor Thermal Inkjet Printer — `$235.00 / unit`
+- T10-Plus Online Thermal Inkjet Printer — `$195.00 / unit`
+- T10 Plus-2 Two-Head Online Thermal Inkjet Printer — `$320.00 / unit`
+- F-11 Feeding Inkjet Printer — `$550.00 / unit`
+- MY-300 II Steel Wheel Carton Printer — `$507.00 / unit`
+- FH-M3S Touchscreen Handheld Inkjet Printer — quote on request
+- FH-500A Carton Printing Machine — quote on request
 
-Prices are in USD and exclude shipping. Inkjet printer prices exclude the ink cartridge. Copper type characters and character boxes are listed under Consumables.
+Prices are in USD and exclude shipping. Inkjet printer prices exclude the ink cartridge. TIJ cartridges (12.7 mm from $30, 25.4 mm from $50), hot stamping ribbon SCF-900 (from $0.80/roll), solid ink rolls (from $0.50/piece), copper type characters ($0.30/piece) and T/R type characters ($0.30/piece) are listed under Consumables.
 
 ## Run locally
 

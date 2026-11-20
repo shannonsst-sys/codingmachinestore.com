@@ -52,6 +52,7 @@ export default function QuoteForm() {
 
   return <form className="quote-form-modern" action="https://formspree.io/f/xppalleq" method="POST" onSubmit={validateContact}>
     <input type="hidden" name="_subject" value="New Coding Machine Store quote request" />
+    <input type="hidden" name="_next" value="https://codingmachinestore.com/thank-you/" />
     <input type="hidden" name="company_name" value="M. H. S. City" />
     <input type="hidden" name="company_address_line" value="C12-2, No. 66 Tingchao Road, Shangwang Street, Ruian City" />
     <input type="hidden" name="company_city" value="Ruian City" />
