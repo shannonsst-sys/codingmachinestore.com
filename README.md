@@ -1,9 +1,17 @@
 # Coding Machine Store
 
-Static storefront for `codingmachinestore.com`, built around the first two ready-to-list products:
+Static storefront for `codingmachinestore.com`, built around eight ready-to-list coding machines from Zhejiang Feihuang, Ruian:
 
-- DY-8 Hand-Operated Hot Ribbon Coding Machine — `$40.00 / unit`
-- HP-241B Electric Hot Ribbon Coding Machine — `$160.00 / unit`
+- DY-8B Manual Hot Ribbon Coding Machine — `$47.28 / unit`
+- HP-241B Electric Hot Ribbon Coding Machine — `$113.05 / unit`
+- HP-241 Ribbon Printing Machine — `$164.79 / unit`
+- HP-241C Pneumatic Hot Ribbon Coding Machine — `$215.62 / unit`
+- HP-241Q Pneumatic Hot Ribbon Coding Machine — `$251.76 / unit`
+- HP-501 Pneumatic Hot Ribbon Coding Machine — `$193.00 / unit`
+- HP-280 Hot Ink Roll Coding Machine — `$232.90 / unit`
+- LS-1100 Ink Wheel Coding Machine — `$194.05 / unit`
+
+Prices are in USD and exclude shipping. Copper type characters and character boxes are listed under Consumables.
 
 ## Run locally
 
@@ -19,7 +27,7 @@ Then open `http://localhost:4321`.
 ## Included flows
 
 - Responsive homepage with factory-direct positioning and generated hero image.
-- Independent Astro product pages at `/products/dy-8/` and `/products/hp-241b/`, with specifications, thumbnails and supplied detail-image galleries.
+- Independent Astro product pages at `/products/dy-8/`, `/products/hp-241b/`, `/products/hp-241/`, `/products/hp-241c/`, `/products/hp-241q/`, `/products/hp-501/`, `/products/hp-280/` and `/products/ls-1100/`, with specifications, thumbnails and supplied detail-image galleries.
 - Category structure for inkjet printers, coding machines, ribbon coders, ink-wheel coders, ribbons, type characters and copper heads.
 - Product cards and structured product data in `src/data/products.ts`.
 - React cart island with local-storage persistence and product image lightbox with arrows and keyboard controls.
