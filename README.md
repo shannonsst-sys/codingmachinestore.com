@@ -47,7 +47,7 @@ Then open `http://localhost:4321`.
 ## Included flows
 
 - Responsive homepage with factory-direct positioning and generated hero image.
-- Independent Astro product pages at `/products/dy-8/`, `/products/hp-241b/`, `/products/hp-241/`, `/products/hp-241c/`, `/products/hp-241q/`, `/products/hp-501/`, `/products/hp-280/`, `/products/ls-1100/` and `/products/my-380f/`, with specifications, thumbnails and supplied detail-image galleries.
+- Independent Astro product pages at `/products/dy-8b/`, `/products/hp-241b/`, `/products/hp-241/`, `/products/hp-241c/`, `/products/hp-241q/`, `/products/hp-501/`, `/products/hp-280/`, `/products/ls-1100/` and `/products/my-380f/`, with specifications, thumbnails and supplied detail-image galleries.
 - Category structure for inkjet printers, coding machines, ribbon coders, ink-wheel coders, ribbons, type characters and copper heads.
 - Product cards and structured product data in `src/data/products.ts`.
 - React cart island with local-storage persistence and product image lightbox with arrows and keyboard controls.
