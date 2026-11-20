@@ -135,6 +135,17 @@ export const products: Product[] = [
     specs: [['Print range', 'Axial 40 mm, circumferential ≤45 mm'], ['Printing lines', 'T-type max 13 lines, 20 characters per line; R-type max 10 lines, 13 characters per line'], ['Type specifications', 'T-type 1.5 / 2.0 / 2.5 / 3.0 mm × 3.5 mm; R-type 3.5 mm × 3.5 / 4.5 / 5.5 mm'], ['Print speed', '≤300 prints/min'], ['Packaging film line speed', '≤50 m/min'], ['Minimum spacing', '≥70 mm (two-line), ≥38 mm (four-line)'], ['Control box', 'Temperature control type'], ['Solid ink', 'Φ36 × 40 mm (max length)'], ['Power supply', 'AC 220 V ± 10 V, 50 / 60 Hz, 130 W'], ['Weight', 'Print head 2.0 kg, control box 1.0 kg'], ['Dimensions', 'Print head 120 × 100 × 140 mm, control box 180 × 160 × 125 mm']],
   },
   {
+    slug: 'my-380f', model: 'MY-380F', name: 'MY-380F Automatic Solid Ink Roll Coding Machine', type: 'Automatic solid ink roll coder', category: 'ink-wheel-coders', parentCategory: 'ink-wheel-coders', subcategory: 'ink roller', useCategory: 'ink-roller-standalone', price: 267.32, badge: 'Automatic paging',
+    hero: '/assets/products/my-380f/hero.png',
+    gallery: ['/assets/products/my-380f/hero.png', '/assets/products/my-380f/detail-1.png', '/assets/products/my-380f/detail-2.png'],
+    detailGallery: ['/assets/products/my-380f/hero.png', '/assets/products/my-380f/detail-1.png', '/assets/products/my-380f/detail-2.png'],
+    description: 'An automatic solid ink roll coding machine with automatic paging for date, batch and expiry coding on paper bags, labels and film boxes, using a heated solid ink wheel for instant-dry print.',
+    longDescription: 'The MY-380F is an automatic solid ink roll (ink wheel) coding machine with automatic paging, automatic counting and photoelectric positioning. The heated constant-temperature solid ink wheel prints instantly dry, with no smearing, on paper bags, paper and plastic labels, film boxes and similar flat materials.',
+    applications: 'Paper bags · Paper / plastic labels · Film boxes · Medicine · Food · Cosmetics · Hardware labels',
+    specs: [['Power supply', 'AC 220 V / 50 Hz, 180 W; AC 110 V / 60 Hz export/custom'], ['Printing speed', '≤300 impressions/min (depends on object size)'], ['Object size', 'Length up to 500 mm; width up to 180 mm standard, up to 350 mm widened'], ['Print position', 'Single side 60–250 mm, freely adjustable'], ['Printing lines', 'T-type 1 line, max 10 characters/line; R-type up to 8 lines, max 8 characters/line'], ['Type size', '2.0T, 2.5T, 3.0T standard (18PT, 6*7T custom); default type box 9PT-T, 2 × 3 mm characters'], ['Solid ink roll', 'Φ36 × 32 mm standard, black supplied; Φ36 × 16 / 36 × 36 / 36 × 40 mm optional; black / blue / red / white'], ['Dimensions', '440 × 345 × 280 mm standard; 440 × 540 × 280 mm widened'], ['Net weight', '22 kg standard / 24 kg widened'], ['Shell', 'Painted iron shell standard; stainless-steel shell option']],
+    relatedAccessories: ['copper-type-characters', 'copper-type-character-box'],
+  },
+  {
     slug: 'copper-type-characters', model: 'Copper Type Characters', name: 'Copper Type Characters', type: 'Ribbon machine part', category: 'ribbon-machine-parts', parentCategory: 'ribbon-consumables', subcategory: 'machine part', useCategory: 'ribbon-standalone', price: 0.3, priceLabel: 'From $0.30', priceUnit: 'USD / piece', badge: 'Movable type',
     hero: '/assets/products/copper-type-characters/hero.png',
     gallery: Array.from({ length: 6 }, (_, index) => `/assets/products/copper-type-characters/${index === 0 ? 'hero' : `main-${index + 1}`}.png`),
