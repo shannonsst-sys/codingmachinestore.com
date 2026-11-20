@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import AddToCartButton from './AddToCartButton';
 
 type HomepageProduct = {
@@ -12,8 +12,6 @@ type HomepageProduct = {
   priceLabel?: string | null;
   hasOptions: boolean;
 };
-
-const PAGE_SIZE = 8;
 
 const SLIDES = [
   {
@@ -45,12 +43,9 @@ const SLIDES = [
 export default function HomepageShowcase({ products }: { products: HomepageProduct[] }) {
   const [slide, setSlide] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [page, setPage] = useState(1);
-
-  const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
-  const currentPage = Math.min(page, totalPages);
-  const pageStart = (currentPage - 1) * PAGE_SIZE;
-  const pageProducts = products.slice(pageStart, pageStart + PAGE_SIZE);
+  const rowRef = useRef<HTMLDivElement>(null);
+  const dragRef = useRef<{ startX: number; startScroll: number } | null>(null);
+  const movedRef = useRef(false);
 
   useEffect(() => {
     if (paused) return;
@@ -59,12 +54,38 @@ export default function HomepageShowcase({ products }: { products: HomepageProdu
   }, [paused, slide]);
 
   const goToSlide = (next: number) => setSlide((next + SLIDES.length) % SLIDES.length);
-  const goToPage = (next: number) => {
-    setPage(Math.min(Math.max(1, next), totalPages));
-    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const activeSlide = SLIDES[slide];
+
+  const scrollRow = (direction: 1 | -1) => {
+    const row = rowRef.current;
+    if (!row) return;
+    const firstCard = row.querySelector<HTMLElement>('.product-card');
+    const step = (firstCard?.offsetWidth ?? 320) + 12;
+    row.scrollBy({ left: direction * step, behavior: 'smooth' });
   };
 
-  const activeSlide = SLIDES[slide];
+  const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    movedRef.current = false;
+    dragRef.current = { startX: event.clientX, startScroll: rowRef.current?.scrollLeft ?? 0 };
+  };
+  const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    const drag = dragRef.current;
+    const row = rowRef.current;
+    if (!drag || !row) return;
+    const delta = event.clientX - drag.startX;
+    if (Math.abs(delta) > 5) movedRef.current = true;
+    if (movedRef.current) row.scrollLeft = drag.startScroll - delta;
+  };
+  const endDrag = () => {
+    dragRef.current = null;
+  };
+  const onClickCapture = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (movedRef.current) {
+      event.preventDefault();
+      event.stopPropagation();
+      movedRef.current = false;
+    }
+  };
 
   return (
     <>
@@ -107,13 +128,21 @@ export default function HomepageShowcase({ products }: { products: HomepageProdu
         </div>
       </div>
 
-      <div className="product-grid product-grid--paged">
-        {products.map((product, index) => {
-          const visible = index >= pageStart && index < pageStart + PAGE_SIZE;
-          return (
-            <article className="product-card" key={product.slug} hidden={!visible}>
+      <div className="product-row-wrap">
+        <button type="button" className="product-row-arrow product-row-arrow-prev" onClick={() => scrollRow(-1)} aria-label="Scroll products left">‹</button>
+        <div
+          className="product-row"
+          ref={rowRef}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={endDrag}
+          onPointerLeave={endDrag}
+          onClickCapture={onClickCapture}
+        >
+          {products.map((product) => (
+            <article className="product-card" key={product.slug}>
               <a className="product-card-media" href={`/products/${product.slug}/`}>
-                <img src={product.hero} alt={product.name} loading="lazy" />
+                <img src={product.hero} alt={product.name} loading="lazy" draggable={false} />
               </a>
               <div className="product-card-body">
                 <span className="eyebrow">{product.model} · {product.type}</span>
@@ -129,28 +158,10 @@ export default function HomepageShowcase({ products }: { products: HomepageProdu
                 </div>
               </div>
             </article>
-          );
-        })}
-      </div>
-
-      {totalPages > 1 && (
-        <nav className="pagination" aria-label="Product pages">
-          <button type="button" className="pagination-button" onClick={() => goToPage(currentPage - 1)} disabled={currentPage === 1} aria-label="Previous page">← Prev</button>
-          {Array.from({ length: totalPages }, (_, index) => index + 1).map((pageNumber) => (
-            <button
-              key={pageNumber}
-              type="button"
-              className={pageNumber === currentPage ? 'pagination-button active' : 'pagination-button'}
-              aria-current={pageNumber === currentPage ? 'page' : undefined}
-              onClick={() => goToPage(pageNumber)}
-            >
-              {pageNumber}
-            </button>
           ))}
-          <button type="button" className="pagination-button" onClick={() => goToPage(currentPage + 1)} disabled={currentPage === totalPages} aria-label="Next page">Next →</button>
-          <span className="pagination-status">Page {currentPage} of {totalPages} · Showing {pageProducts.length} of {products.length} machines</span>
-        </nav>
-      )}
+        </div>
+        <button type="button" className="product-row-arrow product-row-arrow-next" onClick={() => scrollRow(1)} aria-label="Scroll products right">›</button>
+      </div>
     </>
   );
 }
