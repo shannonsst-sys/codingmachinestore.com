@@ -8,12 +8,54 @@ const featuredCategories = categories.filter((category) => category.featured);
 const machineCategories = ['ribbon-coding-machines', 'ink-wheel-coders', 'inkjet-printers'];
 const homepageProducts = products.filter((product) => machineCategories.includes(product.category));
 const machineCount = homepageProducts.length;
-const consumableCount = products.length - machineCount;
+
 ---
 <SiteLayout title="Coding Machine Store | Inkjet & Coding Equipment">
-  <section class="hero"><div><span class="eyebrow">Factory-direct · Ruian, Zhejiang, China</span><h1>Mark every product clearly.</h1><p class="hero-copy">Factory-direct coding equipment from Ruian, Zhejiang — hot ribbon coders, pneumatic coders, ink wheel coders and handheld, online, desktop and conveyor thermal inkjet printers for date, batch and expiry coding on flexible packaging and production lines. Clear specifications, direct pricing and practical support.</p><div class="hero-actions"><a class="button button-dark" href="/products/">Browse products</a><a class="text-link" href="#products">See featured models ↓</a></div></div><div class="hero-media"><img src="/assets/generated/hero-real-machines-v2.png" alt="HP-241 ribbon coder, MY-380F ink wheel coder, K90 desktop inkjet printer and A5 handheld inkjet printer" /></div></section>
-  <section class="section" id="categories"><div class="section-heading"><div><span class="eyebrow">Shop by application</span><h2>Start with the right coding system.</h2></div><p class="section-intro">Choose one of the three machine families. Matching machine parts and supplies are organized separately under Consumables.</p></div><div class="category-grid">{featuredCategories.map((category) => <a class="category-card" href={`/category/${category.slug}/`}><span class="eyebrow">{category.label}</span><strong>{category.title}</strong><p>{category.description}</p><span>View category →</span></a>)}</div></section>
-  <section class="section" id="products"><div class="section-heading"><div><span class="eyebrow">Ready to quote</span><h2>Current products.</h2></div><div><p class="section-intro">{machineCount} coding machines are ready to quote: manual, electric and pneumatic hot ribbon coders, hot ink roll, ink wheel and automatic solid ink roll coders, plus handheld, online, desktop and conveyor thermal inkjet printers. Matching ribbons, ink rolls, type characters and TIJ cartridges are listed under Consumables ({consumableCount} products). Each product page contains its specifications and requirements. Prices are in USD and exclude shipping.</p><a class="text-link" href="/products/">Open the full product catalogue →</a></div></div><HomepageShowcase client:load products={homepageProducts.map((product) => ({ slug: product.slug, model: product.model, name: product.name, type: product.type, description: product.description, hero: product.hero, price: product.price, priceLabel: product.priceLabel ?? null, hasOptions: Boolean(product.options?.length) }))} /></section>
+  <section class="hero"><div><span class="eyebrow">Factory-direct · Ruian, Zhejiang, China</span><h1>Industrial coding equipment.</h1><p class="hero-copy">Print dates and lot codes on packaging with inkjet, ribbon and ink roll coders.</p><div class="hero-actions"><a class="button button-dark" href="/products/">Explore machines</a><a class="text-link" href="#quote">Request a quote &rarr;</a></div></div><div class="hero-media"><img src="/assets/generated/hero-machines-revised.png" alt="Five industrial coding machines, including a conveyor inkjet printer" fetchpriority="high" /></div></section>
+  <section class="section" id="categories"><div class="section-heading"><div><span class="eyebrow">Browse by print method</span><h2>Find your coding system.</h2></div><p class="section-intro">Choose one of the three machine families. Matching machine parts and supplies are organized separately under Consumables.</p></div><div class="category-grid">{featuredCategories.map((category) => <a class="category-card" href={`/category/${category.slug}/`}><span class="eyebrow">{category.label}</span><strong>{category.title}</strong><p>{category.description}</p><span>View category →</span></a>)}</div></section>
+  <section class="section" id="products"><div class="section-heading"><div><span class="eyebrow">Equipment catalogue</span><h2>Explore the machines.</h2></div><div><p class="section-intro">Compare {machineCount} machines by print method, specifications and price. Prices are in USD. Shipping is quoted separately.</p><a class="text-link" href="/products/">Open the full product catalogue →</a></div></div><HomepageShowcase client:load products={homepageProducts.map((product) => ({ slug: product.slug, model: product.model, name: product.name, type: product.type, description: product.description, hero: product.hero, price: product.price, priceLabel: product.priceLabel ?? null, hasOptions: Boolean(product.options?.length) }))} /></section>
   <section class="section" id="how-ordering"><div class="section-heading"><div><span class="eyebrow">How ordering works</span><h2>From quote to delivery.</h2></div><p class="section-intro">No minimum order — order a single unit or a full line. Every product is priced per unit in USD, excluding shipping.</p></div><div class="category-grid"><div class="category-card"><span class="eyebrow">Step 1</span><strong>Add to your quote list</strong><p>Choose the model, size and quantity on each product page, then add it to your quote list.</p></div><div class="category-card"><span class="eyebrow">Step 2</span><strong>Send the quote form</strong><p>Complete the form below with your delivery address. We reply by email or WhatsApp with the shipping cost and availability.</p></div><div class="category-card"><span class="eyebrow">Step 3</span><strong>Volume pricing</strong><p>Ordering 10 or more units of a machine? Ask for volume pricing — 10-set prices are below the single-unit price. Shipping is quoted separately for your address.</p></div></div></section>
-  <section class="section quote-section" id="quote"><div class="section-heading"><div><span class="eyebrow">Shipping calculated separately</span><h2>Build a quote list.</h2></div><p class="section-intro">Add products to the cart, then complete this form. Formspree sends the request to us, and we will reply by email or WhatsApp with the available shipping option.</p></div><QuoteForm client:load /></section>
+  <section class="section quote-section" id="quote"><div class="section-heading"><div><span class="eyebrow">Shipping calculated separately</span><h2>Build a quote list.</h2></div><p class="section-intro">Add products to the cart, then complete this form. We will confirm availability and shipping by email or WhatsApp.</p></div><QuoteForm client:load /></section>
 </SiteLayout>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    background: #152d29;
+    color: #faf8f0;
+  }
+  .hero > div:first-child { padding: clamp(32px, 5vw, 84px); }
+  .hero .eyebrow { color: #ddc38b; }
+  .hero h1 { max-width: 13ch; margin: 20px 0; font-size: clamp(2.7rem, 5vw, 5rem); line-height: 1.04; letter-spacing: -.055em; }
+  .hero-copy { max-width: 43ch; color: #d3dfd8; line-height: 1.65; }
+  .hero-media { min-height: 0; background: #182b36; }
+  .hero-media img { display: block; width: 100%; height: auto; max-height: none; }
+  .hero-actions { flex-wrap: wrap; }
+  .hero-actions .button { background: #dec591; color: #152d29; }
+  .hero-actions .text-link { color: #faf8f0; }
+  .section h2 { font-size: clamp(2rem, 3.6vw, 3.6rem); color: #19352f; }
+  .category-card { border-top: 2px solid #bda36e; }
+  #quote { scroll-margin-top: 86px; }
+  @media (max-width: 720px) {
+    .hero { grid-template-columns: minmax(0, 1fr); }
+    .hero > div:first-child { padding: 38px 6vw; }
+  }
+</style>
+<style is:global>
+.hero.hero{position:relative;isolation:isolate;display:flex;align-items:center;overflow:hidden;min-height:clamp(480px,43vw,690px);background:#efefef;color:#142822}
+.hero.hero>.hero-media{position:absolute;inset:0;z-index:-1;background:#efefef}
+.hero.hero .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center bottom}
+.hero.hero .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f4f4f2 0%,rgba(244,244,242,.98) 19%,rgba(244,244,242,.8) 28%,transparent 41%)}
+.hero.hero>div:first-child{padding:40px 0 40px 5vw;width:31%;box-sizing:content-box}
+.hero.hero h1{font-size:clamp(48px,4.7vw,82px);line-height:.99;color:#142822;letter-spacing:-.06em;margin:17px 0 20px}
+main section.hero.hero .eyebrow{color:#73571d;font:700 12px/1.3 Arial,sans-serif;letter-spacing:.11em}
+.hero.hero .hero-copy{color:#36463e;font-size:17px;max-width:32ch;margin-bottom:25px}
+main section.hero.hero .hero-actions a.button{background:#15392d;color:white;border-radius:4px}
+main section.hero.hero .hero-actions a.text-link{color:#183c30}
+#categories.section{padding-top:48px}
+@media(max-width:760px){.hero.hero{display:flex;flex-direction:column;align-items:stretch;min-height:0}.hero.hero>div:first-child{width:auto;padding:32px 6vw 10px}.hero.hero>.hero-media{position:relative;z-index:0}.hero.hero .hero-media img{height:auto}.hero.hero .hero-media:after{display:none}.hero.hero h1{max-width:12ch}.hero.hero .hero-copy{max-width:40ch}}
+</style>
