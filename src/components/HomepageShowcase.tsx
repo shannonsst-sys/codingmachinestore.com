@@ -66,6 +66,8 @@ export default function HomepageShowcase({ products }: { products: HomepageProdu
 
   const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
     movedRef.current = false;
+    dragRef.current = null;
+    if (event.pointerType !== 'mouse' || (event.target instanceof Element && event.target.closest('button, input'))) return;
     dragRef.current = { startX: event.clientX, startScroll: rowRef.current?.scrollLeft ?? 0 };
   };
   const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
@@ -135,7 +137,7 @@ export default function HomepageShowcase({ products }: { products: HomepageProdu
           ref={rowRef}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
-          onPointerUp={endDrag}
+          onPointerCancel={endDrag} onPointerUp={endDrag}
           onPointerLeave={endDrag}
           onClickCapture={onClickCapture}
         >
