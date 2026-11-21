@@ -117,8 +117,8 @@ export const products: Product[] = [
   {
     slug: 'hp-280', model: 'HP-280', name: 'Hot Ink Roll Coding Machine', type: 'Hot ink roll coder', category: 'ink-wheel-coders', parentCategory: 'ink-wheel-coders', subcategory: 'ink roller', useCategory: 'ink-roller-packaging-line', price: 232.90, badge: 'Ink roll',
     hero: '/assets/products/hp-280/hero.png',
-    gallery: ['/assets/products/hp-280/hero.png', '/assets/products/hp-280/detail-1.png'],
-    detailGallery: ['/assets/products/hp-280/hero.png', '/assets/products/hp-280/detail-1.png'],
+    gallery: ['/assets/products/hp-280/hero.png', '/assets/products/hp-280/detail-1.png', '/assets/products/print-samples/ink-roll-carton-print.png'],
+    detailGallery: ['/assets/products/hp-280/hero.png', '/assets/products/hp-280/detail-1.png', '/assets/products/print-samples/ink-roll-carton-print.png'],
     description: 'A hot ink roll coding machine for date and batch coding on packaging film, using a solid ink roll and a temperature-controlled control box.',
     longDescription: 'The HP-280 is a hot ink roll printing machine for coding on packaging film lines. It prints with a solid ink roll, with stepless temperature control, and is designed for continuous use on packaging film.',
     applications: 'Packaging film · Flexible packaging · Food packaging · Pharmaceutical packaging',
@@ -128,8 +128,8 @@ export const products: Product[] = [
   {
     slug: 'ls-1100', model: 'LS-1100', name: 'Ink Wheel Coding Machine', type: 'Ink wheel coder', category: 'ink-wheel-coders', parentCategory: 'ink-wheel-coders', subcategory: 'ink roller', useCategory: 'ink-roller-packaging-line', price: 194.05, badge: 'High-speed ink wheel',
     hero: '/assets/products/ls-1100/hero.png',
-    gallery: ['/assets/products/ls-1100/hero.png', '/assets/products/ls-1100/detail-1.png'],
-    detailGallery: ['/assets/products/ls-1100/hero.png', '/assets/products/ls-1100/detail-1.png'],
+    gallery: ['/assets/products/ls-1100/hero.png', '/assets/products/ls-1100/detail-1.png', '/assets/products/print-samples/ink-roll-carton-print.png'],
+    detailGallery: ['/assets/products/ls-1100/hero.png', '/assets/products/ls-1100/detail-1.png', '/assets/products/print-samples/ink-roll-carton-print.png'],
     description: 'An ink wheel coding machine for date and batch coding on packaging film, using a solid ink wheel and a temperature-controlled control box.',
     longDescription: 'The LS-1100 is a friction ink wheel printing machine for coding on packaging film lines. It prints with a solid ink wheel, with temperature control, and is designed for continuous use on packaging film.',
     applications: 'Packaging film · Flexible packaging · Food packaging · Pharmaceutical packaging',
