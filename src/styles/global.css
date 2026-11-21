@@ -91,7 +91,7 @@
 .detail-gallery figure .lightbox .lightbox-image,
 .story-image .lightbox .lightbox-image { width:auto; height:auto; max-width:min(90vw,1100px); max-height:86vh; object-fit:contain; mix-blend-mode:normal !important; opacity:1 !important; aspect-ratio:auto !important; background:transparent; }
 .story-image .image-lightbox-trigger { flex:1; min-height:360px; }
-.detail-gallery figure .image-lightbox-trigger { aspect-ratio:1/.82; }
+.detail-gallery figure .image-lightbox-trigger { height:auto; aspect-ratio:1/.82; }
 .details h2 em { color:var(--accent); font-style:normal; }
 .details-applications { margin-top:42px; padding-top:20px; border-top:1px solid #3d443d; }
 .details-applications p { margin-bottom:0; }
