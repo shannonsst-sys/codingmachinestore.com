@@ -15,8 +15,8 @@ type HomepageProduct = {
 
 const SLIDES = [
   {
-    image: '/assets/generated/hero-real-machines-v2.png',
-    alt: 'HP-241 ribbon coder, MY-380F ink wheel coder, K90 desktop inkjet printer and A5 handheld inkjet printer',
+    image: '/assets/generated/hero-machines-revised.png',
+    alt: 'Five industrial coding machines with a conveyor inkjet printer in the foreground',
     title: 'Factory-direct coding machines',
     caption: 'Date, batch and expiry coding for flexible packaging — direct from Ruian, Zhejiang.',
     link: '/products/',
