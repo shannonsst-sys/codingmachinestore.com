@@ -1,0 +1,21 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({ params: { slug: post.id.replace(/\.md$/, '') }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const formatDate = (date: Date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const related = (await getCollection('blog')).filter((other) => other.id.replace(/\.md$/, '') !== post.id.replace(/\.md$/, '')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()).slice(0, 3);
+---
+<SiteLayout title={`${post.data.title} | Coding Machine Store`} description={post.data.description}>
+  <div class="breadcrumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {post.id.replace(/\.md$/, '')}</div>
+  <article class="blog-article">
+    <header class="blog-article-head"><span class="eyebrow">{formatDate(post.data.pubDate)} · Coding Machine Blog</span><h1>{post.data.title}</h1><p class="lead">{post.data.description}</p><img class="blog-hero" src={post.data.heroImage} alt={post.data.heroAlt} /></header>
+    <div class="article-body"><Content /></div>
+    <footer class="blog-article-foot"><h2>Need a machine for the job?</h2><p>Browse the <a href="/products/">full equipment catalogue</a> or <a href="/#quote">send a quote request</a> — tell us your product, your message and your volume, and we will recommend the model that fits.</p><a class="button button-dark" href="/products/">Explore machines →</a></footer>
+  </article>
+  {related.length > 0 && <section class="section"><div class="section-heading"><div><span class="eyebrow">Keep reading</span><h2>More guides.</h2></div><a class="text-link" href="/blog/">All guides →</a></div><div class="blog-grid">{related.map((other) => <article class="blog-card"><a class="blog-card-media" href={`/blog/${other.id.replace(/\.md$/, '')}/`}><img src={other.data.heroImage} alt={other.data.heroAlt} loading="lazy" /></a><div class="blog-card-body"><span class="eyebrow">{formatDate(other.data.pubDate)}</span><h2><a href={`/blog/${other.id.replace(/\.md$/, '')}/`}>{other.data.title}</a></h2><p>{other.data.description}</p><a class="text-link" href={`/blog/${other.id.replace(/\.md$/, '')}/`}>Read the guide →</a></div></article>)}</div></section>}
+</SiteLayout>

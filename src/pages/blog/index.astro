@@ -1,0 +1,10 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const formatDate = (date: Date) => date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<SiteLayout title="Coding Machine Blog | Coding Machine Store" description="Practical guides to date coding, batch coding and inkjet printing: TIJ vs CIJ, handheld vs online printers, and how to choose the right coder for your packaging.">
+  <section class="category-hero"><span class="eyebrow">Coding Machine Blog</span><h1>Guides for buyers.</h1><p>Plain-English guides to coding machines — how the technologies compare, what they cost to run, and which machine fits your packaging. New guides every day.</p></section>
+  <section class="section"><div class="blog-grid">{posts.map((post) => <article class="blog-card"><a class="blog-card-media" href={`/blog/${post.id.replace(/\.md$/, '')}/`}><img src={post.data.heroImage} alt={post.data.heroAlt} loading="lazy" /></a><div class="blog-card-body"><span class="eyebrow">{formatDate(post.data.pubDate)}</span><h2><a href={`/blog/${post.id.replace(/\.md$/, '')}/`}>{post.data.title}</a></h2><p>{post.data.description}</p><a class="text-link" href={`/blog/${post.id.replace(/\.md$/, '')}/`}>Read the guide →</a></div></article>)}</div></section>
+</SiteLayout>
