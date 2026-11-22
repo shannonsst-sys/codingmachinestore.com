@@ -31,7 +31,7 @@ Static storefront for `codingmachinestore.com`, built around twenty-eight ready-
 - FH-M3S Touchscreen Handheld Inkjet Printer — quote on request
 - FH-500A Carton Printing Machine — quote on request
 
-Prices are in USD and exclude shipping. Inkjet printer prices exclude the ink cartridge. TIJ cartridges (12.7 mm from $30, 25.4 mm from $50), hot stamping ribbon SCF-900 (from $0.80/roll), solid ink rolls (from $0.50/piece), copper type characters ($0.30/piece) and T/R type characters ($0.30/piece) are listed under Consumables.
+Prices are in USD and exclude shipping. Inkjet printer prices include ink cartridges — one per print head. TIJ cartridges (12.7 mm from $30, 25.4 mm from $50), hot stamping ribbon SCF-900 (from $0.80/roll), solid ink rolls (from $0.50/piece), copper type characters ($0.30/piece) and T/R type characters ($0.30/piece) are listed under Consumables.
 
 ## Run locally
 
