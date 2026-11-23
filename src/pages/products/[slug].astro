@@ -12,6 +12,8 @@ const machineCategory = getCategory(product.category);
 const applications = product.applications.split(' · ');
 const priceLabel = product.priceLabel ?? `$${product.price.toFixed(2)}`;
 const priceUnit = product.priceUnit ?? 'USD / unit';
+const modelBase = product.model.split('/')[0];
+const seoTitle = product.name.startsWith(modelBase) || product.name.startsWith(modelBase.split(' ')[0]) ? product.name : `${product.model} ${product.name}`;
 const productVideo = product.videoUrl ? {
   url: product.videoUrl,
   embedUrl: product.videoUrl.replace('/shorts/', '/embed/').split('?')[0],
@@ -22,7 +24,7 @@ const relatedAccessories = (product.relatedAccessories ?? [])
   .map((slug) => products.find((candidate) => candidate.slug === slug))
   .filter((accessory): accessory is (typeof products)[number] => Boolean(accessory));
 ---
-<SiteLayout title={`${product.model} | Coding Machine Store`} description={product.description}>
+<SiteLayout title={`${seoTitle} | Coding Machine Store`} description={product.description}>
   <div class="breadcrumbs"><a href="/">Home</a> / <a href="/products/">Products</a> / <a href={`/category/${product.category}/`}>{machineCategory?.title ?? product.type}</a> / {product.model}</div>
   <section class="product-layout"><ProductGallery client:load name={`${product.model} ${product.name}`} images={product.gallery} /><div class="product-info"><span class="eyebrow">{product.model} · {product.subcategory} · {product.type}</span><h1>{product.name}</h1><p class="lead">{product.description}</p><div class="product-price">{priceLabel} <small>{priceUnit}</small></div>{product.options?.length ? <ProductQuoteOptions client:load id={product.slug} name={product.name} options={product.options} notesPrompt={product.notesPrompt} /> : <AddToCartButton client:load id={product.slug} name={`${product.model} ${product.name}`} price={product.price} />}<a class="button" href="/#quote">Go to quote form →</a><div class="product-jump"><a href="#product-details">Product details ↓</a></div><p class="shipping-note"><strong>Shipping calculated separately.</strong><br />Add this product to your quote list, then complete the Formspree form.</p></div></section>
   {productVideo && <section class="product-video" aria-labelledby="product-video-title"><div class="product-video-copy"><span class="eyebrow">See it in action</span><h2 id="product-video-title">Watch the {product.model} make a clean mark.</h2><p>This short video shows the manual hot ribbon coding process. The video keeps its original format and adapts cleanly on desktop and mobile.</p><a class="text-link" href={productVideo.url} target="_blank" rel="noreferrer">Open on YouTube ↗</a></div><div class={`product-video-frame ${videoOrientation}`} style={`--video-aspect-ratio:${productVideo.aspectRatio}`}><iframe src={productVideo.embedUrl} title={`${product.model} demonstration video`} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section>}
