@@ -21,6 +21,7 @@ const formatCartLine = (line: CartLine) => {
 export default function QuoteForm() {
   const [cart, setCart] = useState<CartLine[]>([]);
   const [error, setError] = useState('');
+  const [sending, setSending] = useState(false);
 
   useEffect(() => {
     const refresh = () => setCart(readCart());
@@ -39,15 +40,32 @@ export default function QuoteForm() {
     ? cart.map(formatCartLine).join('\n')
     : 'No products selected yet.';
 
-  const validateContact = (event: FormEvent<HTMLFormElement>) => {
+  const validateContact = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const form = event.currentTarget;
     const email = (form.elements.namedItem('email') as HTMLInputElement | null)?.value.trim();
     if (!email) {
-      event.preventDefault();
       setError('Please enter your email address so we can reply to your quote request.');
       return;
     }
     setError('');
+    setSending(true);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (response.ok) {
+        window.location.href = '/thank-you/';
+        return;
+      }
+      setError('The quote could not be sent. Please try again or contact us on WhatsApp.');
+    } catch {
+      setError('The quote could not be sent. Please check your connection and try again, or contact us on WhatsApp.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return <form className="quote-form-modern" action="https://formspree.io/f/xppalleq" method="POST" onSubmit={validateContact}>
@@ -69,7 +87,7 @@ export default function QuoteForm() {
     </div>
     <label><span>Products and requirements</span><textarea name="message" rows={5} placeholder="Tell us what you need to print, the packaging material, quantity and any compatibility questions." defaultValue={selectedProducts === 'No products selected yet.' ? '' : selectedProducts} /></label>
     {error && <p className="quote-form-error" role="alert">{error}</p>}
-    <button className="button button-dark" type="submit">Send quote request <span>↗</span></button>
+    <button className="button button-dark" type="submit" disabled={sending}>{sending ? 'Sending…' : <>Send quote request <span>↗</span></>}</button>
     <p className="quote-form-note">This form is handled by Formspree. Email is required so we can reply; WhatsApp is optional. Shipping is calculated separately after receiving your address.</p>
   </form>;
 }
